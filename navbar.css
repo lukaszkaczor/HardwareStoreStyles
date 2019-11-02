@@ -396,7 +396,7 @@ nav {
         justify-content: space-between;
         align-items: center;
         /* position: fixed; */
-        /* position: static; */
+        position: static;
         width: 70vw;
         flex-direction: row;
         margin-top: 75px;
