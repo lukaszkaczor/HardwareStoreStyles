@@ -5,8 +5,9 @@
 }
 
 body {
-    background: lightcoral;
-    height: 200vh;
+    /* background: lightcoral; */
+    /* height: 200vh; */
+    /* height: 100%; */
     /* overflow-x: hidden; */
 
 }
@@ -37,7 +38,7 @@ nav {
 .hamburgerMenu {
     display: flex;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     height: 50%;
     flex-basis: 10%;
 
@@ -83,6 +84,7 @@ nav {
 .logo {
     width: 60%;
     font-size: 25px;
+    text-decoration: none;
     font-family: 'Roboto', sans-serif;
     color: crimson;
 }
@@ -102,6 +104,13 @@ nav {
     border-radius: 15px;
     color: crimson;
     font-size: 20px;
+
+    /* background: #000; */
+}
+
+.menuItem:last-child{
+    margin-right: 0;
+    padding-right: 0;
 }
 
 .menuItem :hover{
@@ -139,42 +148,75 @@ nav {
 .searchForm{
     display: flex;
     justify-content: center;
+    align-items: center;
     position: absolute;
-    width: 100%;
+    width: 80%;
     height: 45px;
-    /* background: #000; */
-    bottom: -55px;
-    transition: .75s all;
+    border: 1px solid crimson;
+    background: white;
+    /* bottom: -55px; */
+    bottom: 100px;
+    transition: .3s all;
+    left: 10%;
     /* right: -100vw; */
-    opacity: 0;
+    /* opacity: 0; 0 */
+    border-radius: 22px;
+    /* z-index: -1; */
+    /* background-image: linear-gradient(to right, #bc7281, #c76173, #d04f63, #d73851, #dc143c); */
+  
+    /* background-image: linear-gradient(to right top, #620a21, #7b102c, #951637, #af1c43, #cb234f); */
 }
 
 .showSearchForm{
-    opacity: 1;
+    /* bottom: -55px; */
+    transform: translateY(155px);
+    /* opacity: 1; */
 }
 
 .searchTxt{
-    border: 1px solid crimson;
     border-right: none;
-    border-radius: 20px 0 0 20px;
-    width: 65%;
+    width: 80%;
+    height: 100%;
     padding-left: 25px;
     font-size: 18px;
     outline: none;
+    border: none;
+    border-radius: 20px;
+    background: rgba(0,0,0,0);
+}
+
+.searchSelect{
+    background: rgba(0,0,0,0);
+    display: none;
+}
+
+.searchSelect:hover{
+    cursor: pointer;
 }
 
 .searchBtn{
-    border: 1px solid crimson;
+    background: rgba(0,0,0,0);
+    /* background: red; */
+    border: none;
+    color: white;
+    /* border: 1px solid crimson; */
     border-left: none;
-    border-radius: 0 20px 20px 0;
-    background: white;
-    width: 15%;
+    /* border-radius: 0 20px 20px 0; */
+    border-radius: 20px;
+    /* background: white; */
+    background: crimson;
+    width: 20%;
+    height: 100%;
     font-size: 18px;
     outline: none;
+
+    /* transition: all .3s; */
 }
+
 
 .searchBtn:hover{
     cursor: pointer;
+    /* background: #0078d7; */
 }
 
 
@@ -184,11 +226,16 @@ nav {
     flex-direction: column;
     padding-top: 200px;
     padding: 140px 20px ;
-    background: crimson;
+    background: #9EE76B;
+    background: -webkit-linear-gradient(right, #9EE76B, #4FC587);
+    background: -moz-linear-gradient(right, #9EE76B, #4FC587);
+    background: linear-gradient(to left, #9EE76B, #4FC587);
     position: fixed;
+    /* position: static; */
     width: 100vw;
     height: 100vh;
     left: -100vw;
+    z-index: 98;
 
     transition: .5s all;
 }
@@ -216,19 +263,18 @@ nav {
 }
 
 .leftZero{
-    left: 0;
+    /* left: 0; */
+    transform: translateX(100vw);
 }
 
 @media (min-width: 768px) {
-    body {
-        background: greenyellow;
-    }
+
 
     .logoHolder img{
         width: 25%;
     }
 
-    .fa-search{
+    .menuItem .fa-search{
         font-size: 0;
     }
 
@@ -236,8 +282,19 @@ nav {
         opacity: 1;
         width: 40%;
         /* margin: 0 auto; */
-        left: 35%;
+        left: 37%;
         bottom: 12px;
+    }
+
+    .searchTxt{
+        font-size: 14px;
+    }
+
+
+    
+    .searchSelect{
+        width: 35%;
+        
     }
 
     .searchBtn{
@@ -245,16 +302,14 @@ nav {
         width: 20%;
     }
 
-    .searchTxt{
-        font-size: 14px;
-    }
 }
 
 @media (min-width: 1200px) {
     body {
-        display: flex;
-        justify-content: center;
-        background: cornflowerblue;
+        /* display: flex; */
+        /* justify-content: center; */
+        /* background: cornflowerblue; */
+        background: #f2f2f2;
     }
 
     .navbar{
@@ -263,28 +318,91 @@ nav {
         justify-content: space-between;
     }
 
+    .logoHolder{
+        flex-basis: 25%;
+    }
+
+    .menuHolder{
+        flex-basis: 25%;
+    }
+
+    
+
+
+
+
     .hamburgerMenu{
         display: none;
         /* background: #000; */
     }
 
     .searchForm{
-        left: 35%;
-        width: 30%;
+        border: 1px solid crimson;
+        position: static;
+        /* border-radius: 20px; */
+        /* align-items: center; */
+        /* background: yellow; */
+        left: 37%;
+        /* width: 30%; */
         /* display: none; */
+    }
+
+    .searchTxt{
+        width: 65%;
+        border: none;
+
+    }
+
+    .searchSelect{
+        display: inline;
+        border: none;
+        /* background: #000; */
+        border-left: 1px solid crimson;
+        height: 75%;
+        /* padding-left: 20px; */
+        /* padding-right: 5px; */
+        padding: 0 10px;
+        /* border: 1px solid crimson; */
+        /* border-left: none; */
+        /* border-right: none; */
+        width: 20%;
+        /* border: none; */
+        /* height: 50%; */
+        /* border-right: 1px solid blue ; */
+        -webkit-appearance: none;
+        text-align-last: center;
+        outline: none;
+    }
+
+    select{
+        /* text-align: center; */
+    }
+
+    .searchSelect::after{
+        content: "";
+        background: #000;
+    }
+    
+    .searchBtn{
+        /* background: crimson; */
+        border-radius: 20px;
+        /* width: 10%; */
+        /* width: 50px; */
+        width: 15%;
     }
 
     .mobileSections{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        position: fixed;
+        /* position: fixed; */
+        /* position: static; */
         width: 70vw;
         flex-direction: row;
         margin-top: 75px;
         padding: 0;
         left: 15%;
-        right: 15%;    
+        /* right: 15%;     */
         height: 50px;
         transition: 0s;
         /* flex-wrap: wrap; */
