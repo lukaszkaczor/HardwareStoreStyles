@@ -1,3 +1,4 @@
+//Navbar
 $(".hamburgerMenu").on("click", function () {
     $(".mobileMenuBtn").toggleClass("mobileMenuBtnTransform");
     $(".mobileSections").toggleClass("leftZero");
@@ -5,21 +6,24 @@ $(".hamburgerMenu").on("click", function () {
 });
 
 $(".fa-search").on("click", function () {
-    //   $(".searchForm").toggleClass("displayFlex");
     $(".searchForm").toggleClass("showSearchForm");
-
-
-    //$(".test").fadeToggle()
-
 });
 
+//BoxShadow dla navbara po scrollowaniu 
+$(window).on('scroll', function () {
+
+    if (window.scrollY > 50)
+        $("nav").addClass("showBoxShadow");
+
+    else
+        $("nav").removeClass("showBoxShadow");
+});
 
 
 //Oskryptowanie okazji dnia
 var sold = $(".soldValue").text();
 var left = $(".leftValue").text();
 var total = parseInt(sold) + parseInt(left);
-
 var percent = (sold / total) * 100
 
 setProgressBarWidth();
@@ -49,3 +53,4 @@ setInterval(() => {
 
     $(".timeLeft").text(hoursLeft + ":" + minutesLeft + ":" + secondsLeft);
 }, 1000);
+

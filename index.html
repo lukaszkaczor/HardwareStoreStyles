@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="slider.css">
-    <link rel="stylesheet" href="style.css">
-    <link href="/fontawesome-free-5.11.2-web/css/all.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap&subset=latin-ext" rel="stylesheet"> 
+    <link rel="stylesheet" href="CSS/navbar.css">
+    <link rel="stylesheet" href="CSS/slider.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="fontawesome-free-5.11.2-web/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap&subset=latin-ext" rel="stylesheet">
 </head>
+
 <body>
     <nav>
         <div class="navbar">
-
             <div class="hamburgerMenu">
-                    <div class="mobileMenuBtn"></div>
+                <div class="mobileMenuBtn"></div>
             </div>
 
             <div class="logoHolder">
@@ -27,12 +28,14 @@
             <form class="searchForm">
                 <input type="text" name="Text" id="" class="searchTxt">
                 <select name="Filter" class="searchSelect">
-                    <option value="volvo">Wszystko</option>
-                    <option value="saab">Saab</option>
-                    <option value="mercedes">Mercedes</option>
-                    <option value="audi">asdsdadasdasdassa</option>
-                  </select>
-                <!-- <input type="submit" value="Szukaj" class="searchBtn"> -->
+                    <option value="0">Wszystko</option>
+                    <option value="1">Podzespoły komputerowe</option>
+                    <option value="2">Tablety i laptopy</option>
+                    <option value="3">Telefony i GPS</option>
+                    <option value="4">Urządzenia peryferyjne</option>
+                    <option value="5">RTV</option>
+                    <option value="6">Oprogramowanie</option>
+                </select>
                 <button type="submit" class="searchBtn"><i class="fas fa-search"></i></button>
             </form>
 
@@ -42,117 +45,114 @@
                 <div class="menuItem"><i class="fas fa-shopping-cart"></i></div>
             </div>
         </div>
-
     </nav>
 
     <div class="mobileSections">
-        <a href="#" class="mobileMenuLink">Podzespoły komputerowe</a>
-        <a href="#" class="mobileMenuLink">Tablety i laptopy</a>
-        <a href="#" class="mobileMenuLink">Telefony i GPS</a>
-        <a href="#" class="mobileMenuLink">Urządzenia peryferyjne</a>
-        <a href="#" class="mobileMenuLink">RTV</a>
-        <a href="#" class="mobileMenuLink">Oprogramowanie</a>
+        <a href="#" class="mobileMenuLink"><i class="fas fa-hdd"></i>Podzespoły komputerowe</a>
+        <a href="#" class="mobileMenuLink"><i class="fas fa-laptop"></i>Tablety i laptopy</a>
+        <a href="#" class="mobileMenuLink"><i class="fas fa-mobile"></i>Telefony i GPS</a>
+        <a href="#" class="mobileMenuLink"><i class="fas fa-keyboard"></i>Urządzenia peryferyjne</a>
+        <a href="#" class="mobileMenuLink"><i class="fas fa-tv"></i>RTV</a>
+        <a href="#" class="mobileMenuLink"><i class="fab fa-windows"></i>Oprogramowanie</a>
     </div>
 
     <div class="content">
-        
         <h1 class="hotShotCaption">Okazja Dnia</h1>
-        <a href="" class="hotShotBorder"> 
-        <div class="hotShot">
-            <!-- <h1>Okazja Dnia</h1> -->
-            <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRaEEJBB_Salbr9l971Pl3p1a3qVVbt2ZrwE1r3sGEVzIvRF1mTWMBbkV-IdwG8sNM7MzRKPDoMB5lBlyn8vzTjKvshJsnkpwI2YBCZTimbY9eOO8pnvp-d&usqp=CAc" alt="">
-            <h2 class="hotShotProductName">AMD Ryzen 1700</h2>
-            <div class="prices">
-                <span class="oldPrice">1200zł</span>
-                <span class="newPrice">600zł</span>
-            </div>
-            <div class="info">
-                <span>sprzedano <span class="soldValue">43</span> </span>
-                <span>pozostało <span class="leftValue">100</span> </span>
-            </div>
-            <div class="progressBar">
-                <div class="progress"></div>
-            </div>
-            <h2 class="timeCaption">Oferta kończy się za:</h2>
-            <h2 class="timeLeft">05:29:03</h2>
-       
-        </div>
-    </a>  
-
-
-            
-    <a href="#" class="newsCaption">Nowości</a>
-    <div class="slider">
-        <div class="left-arrow">
-            <div class="arrow"><i class="fas fa-angle-left"></i></div>
-        </div>
-        <a href="#" class="imgHolder imgShow"><img class="img" src="https://steamcdn-a.akamaihd.net/steam/apps/292030/ss_dc55eeb409d6e187456a8e159018e8da098fa468.1920x1080.jpg?t=1550078557" alt="siema">
-            <div class="captionsHolder">
-                <h1 class="sliderImgHeading">Witcher 3 Wild Hunt</h1>
-                <h4 class="sliderImgDesc">Taka dobra gra zze tego tu ja siema stosad sa Lorem ipsum dolor sit
-                    amet,usantium sunt
-                    voluptatem consequuntur eum!</h4>
+        <a href="" class="hotShotBorder">
+            <div class="hotShot">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRaEEJBB_Salbr9l971Pl3p1a3qVVbt2ZrwE1r3sGEVzIvRF1mTWMBbkV-IdwG8sNM7MzRKPDoMB5lBlyn8vzTjKvshJsnkpwI2YBCZTimbY9eOO8pnvp-d&usqp=CAc"
+                    alt="">
+                <h2 class="hotShotProductName">AMD Ryzen 1700</h2>
+                <div class="prices">
+                    <span class="oldPrice">1200zł</span>
+                    <span class="newPrice">600zł</span>
+                </div>
+                <div class="info">
+                    <span>sprzedano <span class="soldValue">43</span> </span>
+                    <span>pozostało <span class="leftValue">100</span> </span>
+                </div>
+                <div class="progressBar">
+                    <div class="progress"></div>
+                </div>
+                <h2 class="timeCaption">Oferta kończy się za:</h2>
+                <h2 class="timeLeft">05:29:03</h2>
             </div>
         </a>
-        <div class="imgHolder imgHidden"><img class="img" src="https://steamcdn-a.akamaihd.net/steam/apps/292030/ss_dc55eeb409d6e187456a8e159018e8da098fa468.1920x1080.jpg?t=1550078557" alt=""></div>
-        <div class="imgHolder imgHidden"><img class="img" src="https://steamcdn-a.akamaihd.net/steam/apps/292030/ss_dc55eeb409d6e187456a8e159018e8da098fa468.1920x1080.jpg?t=1550078557" alt=""></div>
 
-        <div class="right-arrow">
-            <div class="arrow"><i class="fas fa-angle-right"></i></div>
-        </div>
-        <div class="dotHolder">
-        </div>
-    </div>
+        <a href="#" class="newsCaption">Nowości</a>
+        <div class="slider">
+            <div class="left-arrow">
+                <div class="arrow"><i class="fas fa-angle-left"></i></div>
+            </div>
+            <a href="#" class="imgHolder imgShow"><img class="img"
+                    src="https://steamcdn-a.akamaihd.net/steam/apps/292030/ss_dc55eeb409d6e187456a8e159018e8da098fa468.1920x1080.jpg?t=1550078557"
+                    alt="siema">
+                <div class="captionsHolder">
+                    <h1 class="sliderImgHeading">Witcher 3 Wild Hunt</h1>
+                    <h4 class="sliderImgDesc">Taka dobra gra zze tego tu ja siema stosad sa Lorem ipsum dolor sit
+                        amet,usantium sunt
+                        voluptatem consequuntur eum!</h4>
+                </div>
+            </a>
+            <div class="imgHolder imgHidden"><img class="img"
+                    src="https://steamcdn-a.akamaihd.net/steam/apps/292030/ss_dc55eeb409d6e187456a8e159018e8da098fa468.1920x1080.jpg?t=1550078557"
+                    alt=""></div>
+            <div class="imgHolder imgHidden"><img class="img"
+                    src="https://steamcdn-a.akamaihd.net/steam/apps/292030/ss_dc55eeb409d6e187456a8e159018e8da098fa468.1920x1080.jpg?t=1550078557"
+                    alt=""></div>
 
-    <h1 class="bestsellersCaption">Bestsellery</h1>
-    <div class="bestsellers">
-        <!-- <h1>bestseller</h1> -->
-        <a href="#" class="bestseller">
-            <img src="https://images.morele.net/i1064/1348781_0_i1064.jpg" alt="">
-            <h3>Macbook pro1</h3>
-            <h4>5000zł</h4>
-            <a class="addToCart" href="">Dodaj</a>
-        </a>
-        <a href="#" class="bestseller">
-            <img src="https://images.morele.net/i1064/1348781_0_i1064.jpg" alt="">
-            <h3>Macbook pro2</h3>
-            <h4>5000zł</h4>
-            <a class="addToCart" href="">Dodaj</a>
-        </a>
-        <a href="#" class="bestseller">
-            <img src="https://images.morele.net/i1064/1348781_0_i1064.jpg" alt="">
-            <h3>Macbook pro3</h3>
-            <h4>5000zł</h4>
-            <a class="addToCart" href="">Dodaj</a>
-        </a>
-        <a href="#" class="bestseller">
-            <img src="https://images.morele.net/i1064/1348781_0_i1064.jpg" alt="">
-            <h3>Macbook pro4</h3>
-            <h4>5000zł</h4>
-            <a class="addToCart" href="">Dodaj</a>
-        </a>
-        <a href="#" class="bestseller">
-            <img src="https://images.morele.net/i1064/1348781_0_i1064.jpg" alt="">
-            <h3>Macbook pro5</h3>
-            <h4>5000zł</h4>
-            <a class="addToCart" href="">Dodaj</a>
-        </a>
-        <a href="#" class="bestseller">
-            <img src="https://images.morele.net/i1064/1348781_0_i1064.jpg" alt="">
-            <h3>Macbook pro6</h3>
-            <h4>5000zł</h4>
-            <a class="addToCart" href="">Dodaj</a>
-        </a>
-    </div>
+            <div class="right-arrow">
+                <div class="arrow"><i class="fas fa-angle-right"></i></div>
+            </div>
+            <div class="dotHolder">
+            </div>
+        </div>
+
+        <h1 class="bestsellersCaption">Bestsellery</h1>
+        <div class="bestsellers">
+            <a href="#" class="bestseller">
+                <img src="https://images.morele.net/i1064/1348781_0_i1064.jpg" alt="">
+                <h3>Macbook pro1</h3>
+                <h4>5000zł</h4>
+                <a class="addToCart" href="">Dodaj</a>
+            </a>
+            <a href="#" class="bestseller">
+                <img src="https://images.morele.net/i1064/1348781_0_i1064.jpg" alt="">
+                <h3>Macbook pro2</h3>
+                <h4>5000zł</h4>
+                <a class="addToCart" href="">Dodaj</a>
+            </a>
+            <a href="#" class="bestseller">
+                <img src="https://images.morele.net/i1064/1348781_0_i1064.jpg" alt="">
+                <h3>Macbook pro3</h3>
+                <h4>5000zł</h4>
+                <a class="addToCart" href="">Dodaj</a>
+            </a>
+            <a href="#" class="bestseller">
+                <img src="https://images.morele.net/i1064/1348781_0_i1064.jpg" alt="">
+                <h3>Macbook pro4</h3>
+                <h4>5000zł</h4>
+                <a class="addToCart" href="">Dodaj</a>
+            </a>
+            <a href="#" class="bestseller">
+                <img src="https://images.morele.net/i1064/1348781_0_i1064.jpg" alt="">
+                <h3>Macbook pro5</h3>
+                <h4>5000zł</h4>
+                <a class="addToCart" href="">Dodaj</a>
+            </a>
+            <a href="#" class="bestseller">
+                <img src="https://images.morele.net/i1064/1348781_0_i1064.jpg" alt="">
+                <h3>Macbook pro6</h3>
+                <h4>5000zł</h4>
+                <a class="addToCart" href="">Dodaj</a>
+            </a>
+        </div>
 
     </div>
 
 </body>
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-<script src="/script.js"></script>
-<script src="/slider.js"></script>
-<script>
+<script src="JS/script.js"></script>
+<script src="JS/slider.js"></script>
 
-
-</script>
 </html>
