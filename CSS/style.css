@@ -159,6 +159,70 @@ body {
     font-size: 1.5em;
 }
 
+.brandsCaption{
+    font-size: 1.2em;
+    margin: 1.5em 0 .5em 0;
+}
+
+.brands{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* grid-gap: .5em; */
+    /* background: #000; */
+    width: 100%;
+    border-top: 3px solid #444444;
+    /* height: 100px; */
+}
+
+.brand{
+    display: flex;
+    justify-content: center;
+    /* padding: 1em; */
+    padding: 1em 0;
+    /* border: 1px solid red; */
+    /* background: red; */
+}
+
+.brand img{
+    width: 60%;
+}
+
+.moreBrands{
+    grid-area: moreBrandBtn;
+    /* margin-bottom: 300px; */
+    /* width: 10rem; */
+    margin: 0 auto;
+    padding: 1em 2em ;
+    /* height: 100px; */
+    /* padding: 0.5em 1em; */
+    border: 2px solid #444444;
+    background: #FFF;
+    border-radius: 1.5em;
+    /* font-size: .8em; */
+    outline: none;
+
+    transition: .3s color, 1s background;
+}
+
+.moreBrands:hover{
+    background: #444444;
+    color: white;
+}
+
+.recommendedCaption{
+    grid-area: recommendedCaption;
+    font-size: 1.2em;
+    margin: 1em 0 0;
+}
+
+.recommended{
+    grid-area: recommended;
+    margin-bottom: 200px;
+    /* border-left: 3px solid #444444; */
+    border-top: 3px solid #444444;
+    /* border-right: 3px solid #444444; */
+}
+
 @media (min-width: 768px) {
 
     body{
@@ -173,6 +237,11 @@ body {
             "slider slider slider slider slider"
             "bestsellersCaption bestsellersCaption bestsellersCaption hsc hsc"
             "bestsellers bestsellers bestsellers hotShot hotShot"
+            "brandsCaption brandsCaption brandsCaption brandsCaption brandsCaption"
+            "brands brands brands brands brands"
+            "moreBrandBtn moreBrandBtn moreBrandBtn moreBrandBtn moreBrandBtn"
+            "recommendedCaption recommendedCaption recommendedCaption recommendedCaption recommendedCaption"
+            "recommended recommended recommended recommended recommended"
         ;
         grid-gap: .5em;
     }
@@ -233,6 +302,31 @@ body {
     .hotShotBorder {
         grid-area: hotShot;
     }
+
+    .brandsCaption{
+        grid-area: brandsCaption;
+        margin: 1em 0 0 0;
+    }
+
+    .brands{
+        grid-area: brands;
+        grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+        grid-gap: .5em;
+    }
+
+    .brand{
+
+    }
+
+    .recommended{
+        display: grid;
+        /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .recommended img{
+        /* width: 200px; */
+    }
 }
 
 @media (min-width: 1200px) {
@@ -251,7 +345,7 @@ body {
  
 
     .content {
-        width: 70vw;
+        width: 60vw;
         margin-top: 50px;
         grid-gap: 1em;
 
@@ -261,7 +355,13 @@ body {
             "newsCaption newsCaption newsCaption newsCaption hsc hsc "
             "slider slider slider slider hotShot hotShot"
             "bestsellersCaption bestsellersCaption bestsellersCaption bestsellersCaption bestsellersCaption bestsellersCaption"
-            "bestsellers bestsellers bestsellers bestsellers bestsellers bestsellers ";
+            "bestsellers bestsellers bestsellers bestsellers bestsellers bestsellers"
+            "brandsCaption brandsCaption brandsCaption brandsCaption brandsCaption brandsCaption"
+            "brands brands brands brands brands brands"
+            "moreBrandBtn moreBrandBtn moreBrandBtn moreBrandBtn moreBrandBtn moreBrandBtn"
+            "recommendedCaption recommendedCaption recommendedCaption recommendedCaption recommendedCaption recommendedCaption"
+            "recommended recommended recommended recommended recommended recommended";
+            
     }
 
 
@@ -283,11 +383,24 @@ body {
     }
 
     .bestsellers {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
     .bestseller:nth-of-type(n+8) {
         display: flex;
+    }
+
+    .bestseller img{
+        width: 60%;
+    }
+
+    .bestseller h3{
+        font-size: .7em;
+    }
+
+
+    .bestseller h4{
+        font-size: .8em;
     }
 
     .timeCaption{
@@ -298,8 +411,14 @@ body {
         padding: 0;
     }
     .bestsellersCaption{
-        margin: 30px 0 10px;
+        margin: 30px 0 0;    
     }
+
+
+    .brand{
+        padding: 1em 0 0 0;
+    }
+
 
 }
 
@@ -307,11 +426,10 @@ body {
 
 
 
-
-
-
-
-
+*{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+}
 
 
 
