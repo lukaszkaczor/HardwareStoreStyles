@@ -1,0 +1,453 @@
+$primaryColor: white;
+$secondaryColor: #444444;
+
+body {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin-top: 100px;
+    font-family: "Lato";
+}
+
+.hotShotCaption {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.newsCaption {
+    display: none;
+    font-size: 1.2em;
+}
+
+.bestsellers {
+    grid-area: bestsellers;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+}
+
+.bestsellersCaption, .hotShotCaption{
+    font-size: 1.2em;
+}
+
+.bestseller {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: #262626;
+    padding: 20px;
+    transition: .5s all;
+
+    &:hover{
+        transform: scale(1.05);
+    }
+
+    &:nth-of-type(n+8) {
+        display: none;
+    }
+
+    h3 {
+        font-size: 1em;
+        margin: 10px 0;
+    }
+
+    h4{
+        font-size: .8em;
+    }
+
+    img {
+        width: 60%;
+    }
+}
+
+.addToCart {
+    display: none;
+}
+
+.slider {
+    display: none;
+    z-index: 1;
+}
+
+.hotShotBorder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #262626;
+    height: 100%;
+    border-radius: 50px;
+    background-image: linear-gradient(to right, $secondaryColor, #d6475b, #cb6676, #bc818c, #a9989c);
+    margin-bottom: 30px;
+}
+
+.hotShot {
+    width: 98.5%;
+    height: 98.5%;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $primaryColor;
+    font-family: 'Roboto';
+
+    font-size: 20px;
+}
+
+.hotShot img {
+    width: 50%;
+    margin: 20px 0;
+}
+
+.hotShotProductName {
+    text-align: center;
+    font-size: 1em;
+}
+
+.prices {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 20px 0;
+}
+
+.oldPrice {
+    text-decoration: line-through;
+    font-size: 1em;
+    color: $secondaryColor;
+    margin-right: 50px;
+}
+
+.newPrice {
+    font-size: 1.5em;
+    color: crimson;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+    font-size: .75em;
+    width: 100%;
+}
+
+.progressBar {
+    width: 100%;
+    border: 1px solid $secondaryColor;
+    margin: 5px 0 20px;
+    height: 30px;
+}
+
+.progress {
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(to left, #9EE76B, #4FC587);
+}
+
+.timeCaption{
+    font-size: 1em;
+}
+
+.timeLeft{
+    font-size: 1.5em;
+}
+
+.brandsCaption{
+    font-size: 1.2em;
+    margin: 1.5em 0 .5em 0;
+}
+
+.brands{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* grid-gap: .5em; */
+    /* background: #000; */
+    width: 100%;
+    border-top: 3px solid #444444;
+    /* height: 100px; */
+}
+
+.brand{
+    display: flex;
+    justify-content: center;
+    /* padding: 1em; */
+    padding: 1em 0;
+    /* border: 1px solid red; */
+    /* background: red; */
+
+    img{
+        width: 60%;
+    }
+}
+
+
+.moreBrands{
+    grid-area: moreBrandBtn;
+    /* margin-bottom: 300px; */
+    /* width: 10rem; */
+    margin: 0 auto;
+    padding: 1em 2em ;
+    /* height: 100px; */
+    /* padding: 0.5em 1em; */
+    border: 2px solid #444444;
+    background: #FFF;
+    border-radius: 1.5em;
+    /* font-size: .8em; */
+    outline: none;
+
+    transition: .3s color, 1s background;
+
+    &:hover{
+        cursor: pointer;
+        background: #444444;
+        color: white;
+    }
+}
+
+
+
+.recommendedCaption{
+    grid-area: recommendedCaption;
+    font-size: 1.2em;
+    margin: 1em 0 0;
+}
+
+.recommended{
+    grid-area: recommended;
+    // margin-bottom: 200px;
+    /* border-left: 3px solid #444444; */
+    border-top: 3px solid #444444;
+    /* border-right: 3px solid #444444; */
+}
+
+
+
+.slider {
+    grid-area: slider;
+}
+
+@media (min-width: 768px) {
+
+    body{
+        font-size: 23px;
+    }
+
+    .content {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-areas:
+            "newsCaption newsCaption newsCaption newsCaption newsCaption"
+            "slider slider slider slider slider"
+            "bestsellersCaption bestsellersCaption bestsellersCaption hsc hsc"
+            "bestsellers bestsellers bestsellers hotShot hotShot"
+            "brandsCaption brandsCaption brandsCaption brandsCaption brandsCaption"
+            "brands brands brands brands brands"
+            "moreBrandBtn moreBrandBtn moreBrandBtn moreBrandBtn moreBrandBtn"
+            "recommendedCaption recommendedCaption recommendedCaption recommendedCaption recommendedCaption"
+            "recommended recommended recommended recommended recommended";
+        grid-gap: .5em;
+    }
+
+    .slider {
+        grid-area: slider;
+        display: flex;
+        width: 100%;
+        height: 50vw;
+        margin-bottom: 1.5em;
+
+    }
+
+    .slider img {
+        height: 50vw;
+    }
+
+    .newsCaption {
+        grid-area: newsCaption;
+        display: inline;
+        padding: 10px 0;
+        text-decoration: none;
+        color: #262626;
+    }
+
+    .hotShotCaption {
+        grid-area: hsc;
+        margin: 0;
+    }
+
+    .bestsellers {
+        grid-area: bestsellers;
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr;
+        border-left: 3px solid #262626;
+    }
+
+    .bestsellersCaption{
+        grid-area: bestsellersCaption;
+    }
+
+    .bestseller {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h3 {
+            margin: 10px 0;
+        }
+
+        img {
+            width: 80%;
+        }
+
+
+    }
+
+    .hotShotBorder {
+        grid-area: hotShot;
+    }
+
+    .brandsCaption{
+        grid-area: brandsCaption;
+        margin: 1em 0 0 0;
+    }
+
+    .brands{
+        grid-area: brands;
+        grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+        grid-gap: .5em;
+    }
+
+    .brand{
+
+    }
+
+    .recommended{
+        display: grid;
+        /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+
+    body {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 25px;
+    }
+
+    .mobileSections {
+        grid-area: mobileSections;
+    }
+
+    .content {
+        width: 60vw;
+        margin-top: .5em;
+        // grid-gap: 1em;
+        grid-column-gap: 1em;
+
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas:
+            "mobileSections mobileSections mobileSections mobileSections mobileSections mobileSections"
+            "newsCaption newsCaption newsCaption newsCaption hsc hsc "
+            "slider slider slider slider hotShot hotShot"
+            "bestsellersCaption bestsellersCaption bestsellersCaption bestsellersCaption bestsellersCaption bestsellersCaption"
+            "bestsellers bestsellers bestsellers bestsellers bestsellers bestsellers"
+            "brandsCaption brandsCaption brandsCaption brandsCaption brandsCaption brandsCaption"
+            "brands brands brands brands brands brands"
+            "moreBrandBtn moreBrandBtn moreBrandBtn moreBrandBtn moreBrandBtn moreBrandBtn"
+            "recommendedCaption recommendedCaption recommendedCaption recommendedCaption recommendedCaption recommendedCaption"
+            "recommended recommended recommended recommended recommended recommended";
+            
+    }
+
+
+    .hotShotBorder{
+        margin-bottom: 0;
+    }
+
+    .slider {
+        display: flex;
+        align-items: center;
+        border-radius: 20px;
+        height: 100%;
+        margin-bottom: 0;
+        
+        img {
+            border-radius: 20px;
+            height: 100%
+        }
+    }
+
+
+    .bestsellers {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+
+        img{
+            width: 60%;
+        }
+
+        h3{
+            font-size: .7em;
+        }
+
+        h4{
+            font-size: .8em;
+        }
+    }
+
+    .bestseller:nth-of-type(n+8) {
+        display: flex;
+    }
+
+
+    .timeCaption{
+        font-size: 20px;;
+    }
+
+    .newsCaption{
+        padding: 0;
+    }
+    .bestsellersCaption{
+        margin: 30px 0 0;    
+    }
+
+
+    .brand{
+        padding: 1em 0 0 0;
+    }
+
+
+}
+
+footer{
+    height: 300px;
+    width: 100vw;
+    background: #262626;
+    color: $primaryColor;
+    text-align: center;
+    line-height: 100px;
+}
+
+
+
+*{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+}
+
+
+
