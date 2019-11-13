@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14,6 +18,7 @@ nav {
       -ms-flex-direction: column;
           flex-direction: column;
   position: fixed;
+  top: 0;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -25,6 +30,10 @@ nav {
   height: 75px;
   z-index: 99;
   font-size: 20px;
+  -webkit-transition: -webkit-box-shadow 1s;
+  transition: -webkit-box-shadow 1s;
+  transition: box-shadow 1s;
+  transition: box-shadow 1s, -webkit-box-shadow 1s;
 }
 
 .showBoxShadow {
@@ -136,14 +145,11 @@ nav {
   display: flex;
   margin: .7em;
   color: #444444;
+  cursor: pointer;
 }
 
 .menuItem:last-child {
   margin-right: 0;
-}
-
-.menuItem:hover {
-  cursor: pointer;
 }
 
 .mobileMenuBtnTransform {
@@ -241,6 +247,7 @@ nav {
   width: 100vw;
   height: 100vh;
   left: -100vw;
+  top: 0;
   z-index: 98;
   -webkit-transition: .5s transform;
   transition: .5s transform;
@@ -281,8 +288,8 @@ nav {
         flex-basis: 5%;
   }
   .mobileMenuLink:hover {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
+    -webkit-transform: scale(1.01);
+            transform: scale(1.01);
   }
   .logoHolder img {
     width: 25%;
@@ -303,7 +310,7 @@ nav {
 
 @media (min-width: 1200px) {
   .navbar {
-    width: 60vw;
+    width: 1150px;
   }
   .hamburgerMenu {
     display: none;
@@ -312,7 +319,7 @@ nav {
     font-size: .8em;
   }
   .searchSelect {
-    display: inline;
+    display: block;
     border: none;
     border-left: 1px solid #444444;
     height: 75%;
@@ -334,7 +341,7 @@ nav {
     -ms-flex-pack: distribute;
         justify-content: space-around;
     position: static;
-    width: 60vw;
+    width: 1150px;
     margin-top: 75px;
     padding: 0;
     height: 50px;
@@ -366,4 +373,3 @@ nav {
     padding-right: 1em;
   }
 }
-/*# sourceMappingURL=navbar.css.map */

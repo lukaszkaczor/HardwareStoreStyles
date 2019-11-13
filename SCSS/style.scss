@@ -1,10 +1,14 @@
-$primaryColor: white;
-$secondaryColor: #444444;
+@import "config";
+
 
 body {
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
     font-size: 20px;
+
 }
 
 .content {
@@ -36,7 +40,7 @@ body {
     font-size: 1.2em;
 }
 
-.bestseller {
+.product {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -169,25 +173,25 @@ body {
 
 .brands{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+   // grid-template-columns: 1fr 1fr 1fr 1fr;
     /* grid-gap: .5em; */
     /* background: #000; */
-    width: 100%;
-    border-top: 3px solid #444444;
+  //  width: 100%;
+  //  border-top: 3px solid #444444;
     /* height: 100px; */
 }
 
 .brand{
-    display: flex;
-    justify-content: center;
+    // display: flex;
+    // justify-content: center;
     /* padding: 1em; */
-    padding: 1em 0;
+    // padding: 1em 0;
     /* border: 1px solid red; */
     /* background: red; */
 
-    img{
-        width: 60%;
-    }
+    // img{
+    //     width: 60%;
+    // }
 }
 
 
@@ -230,6 +234,74 @@ body {
     /* border-right: 3px solid #444444; */
 }
 
+    ////
+    .content{
+        overflow: hidden;
+    }
+    
+    
+    .brands{
+        display: flex;
+        align-items: center;
+        // display: grid;
+        // grid-template-columns: repeat(10, 1fr);
+        // background: red;
+        width: 10000px;
+        // position: relative;
+        position: relative;
+        // margin-left: ;
+        transition: 1s all;
+    
+    }
+    
+    
+    .brand{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        height: 150px;
+        width: 95vw;
+        // border: 1px solid red;
+    
+        img{
+            width: 20%;
+        }
+    
+    }
+    
+    
+    
+    .prev{
+        // display: flex;
+        width: 50px;
+        height: 50px;
+        border: none;
+        // z-index: 99;
+        position: absolute;
+        // left: 0;
+        // top: 0;
+        // width: 250px;
+    
+        cursor: pointer;
+        transition: 1s all;
+    }
+    
+    
+    .next{
+        position: absolute;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        border: none;
+        // z-index: 99;
+        left: calc(95vw - 50px);
+        // background: red;
+        
+        transition: 1s all;
+    }
+    //////////////
 
 
 .slider {
@@ -243,6 +315,7 @@ body {
     }
 
     .content {
+        width: 700px;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         grid-template-areas:
@@ -254,7 +327,8 @@ body {
             "brands brands brands brands brands"
             "moreBrandBtn moreBrandBtn moreBrandBtn moreBrandBtn moreBrandBtn"
             "recommendedCaption recommendedCaption recommendedCaption recommendedCaption recommendedCaption"
-            "recommended recommended recommended recommended recommended";
+            "recommended recommended recommended recommended recommended"
+            ;
         grid-gap: .5em;
     }
 
@@ -262,13 +336,12 @@ body {
         grid-area: slider;
         display: flex;
         width: 100%;
-        height: 50vw;
         margin-bottom: 1.5em;
-
     }
 
     .slider img {
-        height: 50vw;
+        // height: 50vw;
+        height: 100%
     }
 
     .newsCaption {
@@ -296,7 +369,7 @@ body {
         grid-area: bestsellersCaption;
     }
 
-    .bestseller {
+    .product {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -324,13 +397,11 @@ body {
 
     .brands{
         grid-area: brands;
-        grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
-        grid-gap: .5em;
+        // grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+        // grid-gap: .5em;
+        position: relative;
     }
 
-    .brand{
-
-    }
 
     .recommended{
         display: grid;
@@ -338,6 +409,57 @@ body {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
+    .brand{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        height: 150px;
+        // width: 200px;
+        width: 230px;
+        // border: 1px solid red;
+    
+        img{
+            width: 30%;
+        }
+    
+    }
+    
+    .next{
+        position: absolute;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        border: none;
+        // z-index: 99;
+        left: 650px;
+        right: 0;
+        // background: red;
+        
+        transition: 1s all;
+    }
+
+}
+
+@media (min-width: 1000px){
+
+    .content{
+        width: 950px;
+    }
+    .next{
+        position: absolute;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        border: none;
+        // z-index: 99;
+        left: 900px;
+        right: 0;
+        // background: red;
+        
+        transition: 1s all;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -354,10 +476,12 @@ body {
     }
 
     .content {
-        width: 60vw;
+        // width: 60vw;
+        width: $desktopContent;
         margin-top: .5em;
         // grid-gap: 1em;
         grid-column-gap: 1em;
+        // overflow: hidden;
 
         grid-template-columns: repeat(6, 1fr);
         grid-template-areas:
@@ -409,7 +533,7 @@ body {
         }
     }
 
-    .bestseller:nth-of-type(n+8) {
+    .product:nth-of-type(n+8) {
         display: flex;
     }
 
@@ -426,10 +550,74 @@ body {
     }
 
 
-    .brand{
-        padding: 1em 0 0 0;
+    ////
+.content{
+    overflow: hidden;
+}
+
+
+.brands{
+    display: flex;
+    align-items: center;
+    // display: grid;
+    // grid-template-columns: repeat(10, 1fr);
+    // background: red;
+    width: 10000px;
+    // position: relative;
+    position: relative;
+    // margin-left: ;
+    transition: 1s all;
+
+}
+
+
+.brand{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 150px;
+    width: 230px;
+    // border: 1px solid red;
+
+    img{
+        width: 40%;
     }
 
+}
+
+
+
+.prev{
+    // display: flex;
+    width: 50px;
+    height: 50px;
+    border: none;
+    // z-index: 99;
+    position: absolute;
+    // left: 0;
+    // top: 0;
+    // width: 250px;
+
+    cursor: pointer;
+    transition: 1s all;
+}
+
+
+.next{
+    position: absolute;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border: none;
+    // z-index: 99;
+    left: calc(1150px - 50px);
+    // background: red;
+    
+    transition: 1s all;
+}
+//////////////
 
 }
 

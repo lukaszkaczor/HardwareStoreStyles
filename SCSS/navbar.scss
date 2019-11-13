@@ -1,16 +1,11 @@
-$primaryColor: white;
-$secondaryColor: #444444;
+@import "config";
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 nav {
     display: flex;
     flex-direction: column;
     position: fixed;
+    top: 0;
     justify-content: center;
     align-items: center;
     width: 100vw;
@@ -19,7 +14,7 @@ nav {
     z-index: 99;
     // box-shadow: 0px 6px 7px 0px rgba(68,68,68,0);
     font-size: 20px;
-    // transition: all 5s;
+    transition: box-shadow 1s;
 }
 
 
@@ -107,14 +102,12 @@ nav {
     display: flex;
     margin: .7em;
     color: $secondaryColor;
+    cursor: pointer;
 
     &:last-child {
         margin-right: 0;
     }
 
-    &:hover {
-        cursor: pointer;
-    }
 }
 
 .mobileMenuBtnTransform {
@@ -197,13 +190,14 @@ nav {
     width: 100vw;
     height: 100vh;
     left: -100vw;
+    top: 0;
     z-index: 98;
     transition: .5s transform;
+    
 
     i {
         font-size: 0;
     }
-
 }
 
 .leftZero {
@@ -239,7 +233,7 @@ nav {
     .mobileMenuLink{
         
     &:hover {
-        transform: scale(1.1);
+        transform: scale(1.01);
     }
     }
 
@@ -264,7 +258,8 @@ nav {
 @media (min-width: 1200px) {
 
     .navbar {
-        width: 60vw;
+        // width: 60vw;
+        width: $desktopContent;
     }
 
     .hamburgerMenu {
@@ -276,7 +271,7 @@ nav {
     }
 
     .searchSelect {
-        display: inline;
+        display: block;
         border: none;
         border-left: 1px solid $secondaryColor;
         height: 75%;
@@ -296,7 +291,8 @@ nav {
         flex-direction: row;
         justify-content: space-around;
         position: static;
-        width: 60vw;
+        // width: 60vw;
+        width: $desktopContent;
         margin-top: 75px;
         padding: 0;
         height: 50px;

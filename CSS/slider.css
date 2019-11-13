@@ -6,6 +6,7 @@
 .slider {
     position: relative;
     width: var(--sliderWidth);
+    /* width: 100%; */
 }
 
 .imgHolder {
@@ -18,7 +19,8 @@
     display: block;
     width: 100%;
     /* hei */
-    height: calc(var(--sliderWidth) * .57);
+    /* height: calc(var(--sliderWidth) * .57); */
+    height: 100%;
 }
 
 .captionsHolder {

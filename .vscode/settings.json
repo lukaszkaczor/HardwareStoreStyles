@@ -10,6 +10,8 @@
         "**/node_modules/**",
         ".vscode/**",
         "Assets/**"
-    ]
+    ],
+    "liveSassCompile.settings.generateMap": false
+
 
 }
