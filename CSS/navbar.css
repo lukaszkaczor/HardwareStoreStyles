@@ -30,6 +30,8 @@ nav {
   height: 75px;
   z-index: 99;
   font-size: 20px;
+  -webkit-box-shadow: 0px 6px 7px 0px rgba(68, 68, 68, 0);
+          box-shadow: 0px 6px 7px 0px rgba(68, 68, 68, 0);
   -webkit-transition: -webkit-box-shadow 1s;
   transition: -webkit-box-shadow 1s;
   transition: box-shadow 1s;
@@ -242,6 +244,9 @@ nav {
           flex-direction: column;
   padding: 140px 20px;
   background: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   /* background: linear-gradient(to left, #9EE76B, #4FC587); */
   position: fixed;
   width: 100vw;
@@ -249,8 +254,8 @@ nav {
   left: -100vw;
   top: 0;
   z-index: 98;
-  -webkit-transition: .5s transform;
-  transition: .5s transform;
+  -webkit-transition: .4s transform;
+  transition: .4s transform;
 }
 
 .mobileSections i {
@@ -263,18 +268,20 @@ nav {
 }
 
 .mobileMenuLink {
+  display: inline-block;
   color: #444444;
   font-size: 18px;
   text-decoration: none;
+  text-align: center;
   font-family: 'Roboto', sans-serif;
-  padding: 20px 0;
-  border-top: 1px solid #444444;
+  padding: 20px 40px;
   -webkit-transition: .1s;
   transition: .1s;
 }
 
-.mobileMenuLink:last-child {
-  border-bottom: 1px solid #444444;
+.mobileMenuLink:hover {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
 }
 
 @media (min-width: 768px) {
@@ -286,10 +293,6 @@ nav {
   .hamburgerMenu {
     -ms-flex-preferred-size: 5%;
         flex-basis: 5%;
-  }
-  .mobileMenuLink:hover {
-    -webkit-transform: scale(1.01);
-            transform: scale(1.01);
   }
   .logoHolder img {
     width: 25%;
@@ -323,7 +326,6 @@ nav {
     border: none;
     border-left: 1px solid #444444;
     height: 75%;
-    /* width: 20%; */
     width: 30%;
     padding: 0 .5em;
     -webkit-appearance: none;
@@ -364,12 +366,5 @@ nav {
     height: 50px;
     font-size: 14px;
     color: white;
-  }
-  .mobileMenuLink:first-child {
-    padding-left: 1em;
-  }
-  .mobileMenuLink:last-child {
-    border-bottom: none;
-    padding-right: 1em;
   }
 }

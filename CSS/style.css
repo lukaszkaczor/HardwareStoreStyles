@@ -60,7 +60,8 @@ body {
       grid-template-columns: 1fr;
 }
 
-.bestsellersCaption, .hotShotCaption {
+.bestsellersCaption,
+.hotShotCaption {
   font-size: 1.2em;
 }
 
@@ -231,43 +232,6 @@ body {
   margin: 1.5em 0 .5em 0;
 }
 
-.brands {
-  display: -ms-grid;
-  display: grid;
-  /* grid-gap: .5em; */
-  /* background: #000; */
-  /* height: 100px; */
-}
-
-.brand {
-  /* padding: 1em; */
-  /* border: 1px solid red; */
-  /* background: red; */
-}
-
-.moreBrands {
-  grid-area: moreBrandBtn;
-  /* margin-bottom: 300px; */
-  /* width: 10rem; */
-  margin: 0 auto;
-  padding: 1em 2em;
-  /* height: 100px; */
-  /* padding: 0.5em 1em; */
-  border: 2px solid #444444;
-  background: #FFF;
-  border-radius: 1.5em;
-  /* font-size: .8em; */
-  outline: none;
-  -webkit-transition: .3s color, 1s background;
-  transition: .3s color, 1s background;
-}
-
-.moreBrands:hover {
-  cursor: pointer;
-  background: #444444;
-  color: white;
-}
-
 .recommendedCaption {
   grid-area: recommendedCaption;
   font-size: 1.2em;
@@ -276,9 +240,7 @@ body {
 
 .recommended {
   grid-area: recommended;
-  /* border-left: 3px solid #444444; */
   border-top: 3px solid #444444;
-  /* border-right: 3px solid #444444; */
 }
 
 .content {
@@ -286,6 +248,7 @@ body {
 }
 
 .brands {
+  grid-area: brands;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -294,8 +257,8 @@ body {
           align-items: center;
   width: 10000px;
   position: relative;
-  -webkit-transition: 1s all;
-  transition: 1s all;
+  -webkit-transition: .5s all;
+  transition: .5s all;
 }
 
 .brand {
@@ -311,7 +274,7 @@ body {
   margin: 0;
   padding: 0;
   height: 150px;
-  width: 95vw;
+  width: 50vw;
 }
 
 .brand img {
@@ -324,8 +287,10 @@ body {
   border: none;
   position: absolute;
   cursor: pointer;
-  -webkit-transition: 1s all;
-  transition: 1s all;
+  border-radius: 25px;
+  outline: none;
+  -webkit-transition: .5s all;
+  transition: .5s all;
 }
 
 .next {
@@ -335,8 +300,10 @@ body {
   height: 50px;
   border: none;
   left: calc(95vw - 50px);
-  -webkit-transition: 1s all;
-  transition: 1s all;
+  border-radius: 25px;
+  outline: none;
+  -webkit-transition: .5s all;
+  transition: .5s all;
 }
 
 .slider {
@@ -413,15 +380,16 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .product h3 {
+    font-size: 1rem;
     margin: 10px 0;
+  }
+  .product h4 {
+    font-size: 1rem;
   }
   .product img {
     width: 80%;
@@ -439,17 +407,9 @@ body {
     grid-area: brandsCaption;
     margin: 1em 0 0 0;
   }
-  .brands {
-    -ms-grid-row: 6;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 5;
-    grid-area: brands;
-    position: relative;
-  }
   .recommended {
     display: -ms-grid;
     display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr;
   }
@@ -472,15 +432,7 @@ body {
     width: 30%;
   }
   .next {
-    position: absolute;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    border: none;
     left: 650px;
-    right: 0;
-    -webkit-transition: 1s all;
-    transition: 1s all;
   }
 }
 
@@ -489,15 +441,7 @@ body {
     width: 950px;
   }
   .next {
-    position: absolute;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    border: none;
     left: 900px;
-    right: 0;
-    -webkit-transition: 1s all;
-    transition: 1s all;
   }
 }
 
@@ -569,57 +513,11 @@ body {
   .bestsellersCaption {
     margin: 30px 0 0;
   }
-  .content {
-    overflow: hidden;
-  }
-  .brands {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 10000px;
-    position: relative;
-    -webkit-transition: 1s all;
-    transition: 1s all;
-  }
-  .brand {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin: 0;
-    padding: 0;
-    height: 150px;
-    width: 230px;
-  }
   .brand img {
     width: 40%;
   }
-  .prev {
-    width: 50px;
-    height: 50px;
-    border: none;
-    position: absolute;
-    cursor: pointer;
-    -webkit-transition: 1s all;
-    transition: 1s all;
-  }
   .next {
-    position: absolute;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    border: none;
-    left: calc(1150px - 50px);
-    -webkit-transition: 1s all;
-    transition: 1s all;
+    left: 1100px;
   }
 }
 
