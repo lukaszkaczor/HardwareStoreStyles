@@ -331,7 +331,8 @@ body {
 .posts .morePosts {
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: 20px;
+  color: #444444;
 }
 
 .postsCaption {

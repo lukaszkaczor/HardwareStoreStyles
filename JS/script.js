@@ -9,6 +9,11 @@ $(".fa-search").on("click", function () {
     $(".searchForm").toggleClass("showSearchForm");
 });
 
+$(window).resize(function () {
+    if($(window).width()>768)
+        $(".searchForm").removeClass("showSearchForm");
+});
+
 //BoxShadow dla navbara po scrollowaniu 
 $(window).on('scroll', function () {
 
