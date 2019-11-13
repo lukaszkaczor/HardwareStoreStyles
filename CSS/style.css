@@ -92,10 +92,6 @@ body {
           transform: scale(1.05);
 }
 
-.product:nth-of-type(n+8) {
-  display: none;
-}
-
 .product h3 {
   font-size: 1em;
   margin: 10px 0;
@@ -235,7 +231,7 @@ body {
 .recommendedCaption {
   grid-area: recommendedCaption;
   font-size: 1.2em;
-  margin: 1em 0 0;
+  margin: 1em 0;
 }
 
 .recommended {
@@ -306,6 +302,44 @@ body {
   transition: .5s all;
 }
 
+.posts {
+  grid-area: posts;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  border-left: 3px solid #444444;
+  position: relative;
+}
+
+.posts h1 {
+  font-size: 18px;
+  padding: 20px;
+}
+
+.posts a {
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.posts .morePosts {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.postsCaption {
+  grid-area: postsCaption;
+  font-size: 1.2em;
+  margin: 1em 0 0;
+}
+
 .slider {
   grid-area: slider;
 }
@@ -320,7 +354,7 @@ body {
     display: grid;
     -ms-grid-columns: (1fr)[5];
         grid-template-columns: repeat(5, 1fr);
-        grid-template-areas: "newsCaption newsCaption newsCaption newsCaption newsCaption" "slider slider slider slider slider" "bestsellersCaption bestsellersCaption bestsellersCaption hsc hsc" "bestsellers bestsellers bestsellers hotShot hotShot" "brandsCaption brandsCaption brandsCaption brandsCaption brandsCaption" "brands brands brands brands brands" "moreBrandBtn moreBrandBtn moreBrandBtn moreBrandBtn moreBrandBtn" "recommendedCaption recommendedCaption recommendedCaption recommendedCaption recommendedCaption" "recommended recommended recommended recommended recommended";
+        grid-template-areas: "newsCaption newsCaption newsCaption newsCaption newsCaption" "slider slider slider slider slider" "postsCaption postsCaption postsCaption hsc hsc" "posts posts posts hotShot hotShot" "bestsellersCaption bestsellersCaption bestsellersCaption bestsellersCaption bestsellersCaption" "bestsellers bestsellers bestsellers bestsellers bestsellers" "brandsCaption brandsCaption brandsCaption brandsCaption brandsCaption" "brands brands brands brands brands" "moreBrandBtn moreBrandBtn moreBrandBtn moreBrandBtn moreBrandBtn" "recommendedCaption recommendedCaption recommendedCaption recommendedCaption recommendedCaption" "recommended recommended recommended recommended recommended";
     grid-gap: .5em;
   }
   .slider {
@@ -355,21 +389,21 @@ body {
     margin: 0;
   }
   .bestsellers {
-    -ms-grid-row: 4;
+    -ms-grid-row: 6;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
+    -ms-grid-column-span: 5;
     grid-area: bestsellers;
     display: -ms-grid;
     display: grid;
     grid-gap: 10px;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     border-left: 3px solid #262626;
   }
   .bestsellersCaption {
-    -ms-grid-row: 3;
+    -ms-grid-row: 5;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 3;
+    -ms-grid-column-span: 5;
     grid-area: bestsellersCaption;
   }
   .product {
@@ -401,11 +435,19 @@ body {
     grid-area: hotShot;
   }
   .brandsCaption {
-    -ms-grid-row: 5;
+    -ms-grid-row: 7;
     -ms-grid-column: 1;
     -ms-grid-column-span: 5;
     grid-area: brandsCaption;
     margin: 1em 0 0 0;
+  }
+  .recommendedCaption {
+    -ms-grid-row: 10;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+    grid-area: recommendedCaption;
+    font-size: 1.2em;
+    margin: 1em 0 0;
   }
   .recommended {
     display: -ms-grid;
@@ -466,7 +508,7 @@ body {
     grid-column-gap: 1em;
     -ms-grid-columns: (1fr)[6];
         grid-template-columns: repeat(6, 1fr);
-        grid-template-areas: "mobileSections mobileSections mobileSections mobileSections mobileSections mobileSections" "newsCaption newsCaption newsCaption newsCaption hsc hsc " "slider slider slider slider hotShot hotShot" "bestsellersCaption bestsellersCaption bestsellersCaption bestsellersCaption bestsellersCaption bestsellersCaption" "bestsellers bestsellers bestsellers bestsellers bestsellers bestsellers" "brandsCaption brandsCaption brandsCaption brandsCaption brandsCaption brandsCaption" "brands brands brands brands brands brands" "moreBrandBtn moreBrandBtn moreBrandBtn moreBrandBtn moreBrandBtn moreBrandBtn" "recommendedCaption recommendedCaption recommendedCaption recommendedCaption recommendedCaption recommendedCaption" "recommended recommended recommended recommended recommended recommended";
+        grid-template-areas: "mobileSections mobileSections mobileSections mobileSections mobileSections mobileSections" "newsCaption newsCaption newsCaption newsCaption hsc hsc " "slider slider slider slider hotShot hotShot" "bestsellersCaption bestsellersCaption bestsellersCaption bestsellersCaption bestsellersCaption bestsellersCaption" "bestsellers bestsellers bestsellers bestsellers bestsellers bestsellers" "brandsCaption brandsCaption brandsCaption brandsCaption brandsCaption brandsCaption" "brands brands brands brands brands brands" "moreBrandBtn moreBrandBtn moreBrandBtn moreBrandBtn moreBrandBtn moreBrandBtn" "postsCaption postsCaption recommendedCaption recommendedCaption recommendedCaption recommendedCaption" "posts posts recommended recommended recommended recommended";
   }
   .hotShotBorder {
     margin-bottom: 0;
@@ -528,6 +570,7 @@ footer {
   color: white;
   text-align: center;
   line-height: 100px;
+  margin-top: 100px;
 }
 
 * {
