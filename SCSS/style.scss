@@ -1,5 +1,5 @@
 @import "config";
-
+@import "productList";
 
 body {
     display: flex;
@@ -8,13 +8,14 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 20px;
-
+    width: 100vw;
 }
 
 .content {
     display: flex;
     flex-direction: column;
-    width: 95%;
+    overflow: hidden;;
+    width: 90vw;
     margin-top: 100px;
     font-family: "Lato";
 }
@@ -185,9 +186,7 @@ body {
     border-top: 3px solid #444444;
 }
 
-.content {
-    overflow: hidden;
-}
+
 
 
 .brands {
@@ -207,7 +206,7 @@ body {
     margin: 0;
     padding: 0;
     height: 150px;
-    width: 50vw;
+    width: 45vw;
 
     img {
         width: 20%;
@@ -235,7 +234,7 @@ body {
     width: 50px;
     height: 50px;
     border: none;
-    left: calc(95vw - 50px);
+    left: calc(90vw - 50px);
     border-radius: 25px;
     outline: none;
 
@@ -462,6 +461,10 @@ body {
         }
     }
 
+    .bestseller{
+        width: 50%;
+    }
+
 
     .bestsellers {
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -508,7 +511,6 @@ body {
     .next {
         left: $desktopContent - 50px;
     }
-
 }
 
 footer {
