@@ -296,6 +296,7 @@ nav {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    width: 700px;
   }
   .hamburgerMenu {
     -ms-flex-preferred-size: 5%;
@@ -315,6 +316,12 @@ nav {
   .menuHolder {
     -ms-flex-preferred-size: 25%;
         flex-basis: 25%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .navbar {
+    width: 950px;
   }
 }
 

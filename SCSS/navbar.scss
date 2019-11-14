@@ -227,6 +227,7 @@ nav {
 
     .navbar {
         justify-content: space-between;
+        width: $tabletContent;
     }
 
     .hamburgerMenu {
@@ -251,6 +252,13 @@ nav {
     }
 }
 
+@media (min-width: 1000px)
+{
+    .navbar{
+        width: 950px;
+    }
+
+}
 @media (min-width: 1200px) {
 
     .navbar {
