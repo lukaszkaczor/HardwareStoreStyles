@@ -10,8 +10,15 @@ $(".fa-search").on("click", function () {
 });
 
 $(window).resize(function () {
-    if($(window).width()>768)
+    if ($(window).width() > 768)
         $(".searchForm").removeClass("showSearchForm");
+
+    // if (($window).width() > 1000 && $(".mobileSections").hasClass("leftZero"))
+    if($(".mobileSections").hasClass("leftZero") && $(window).width() >= 1200)
+    {
+        $(".mobileSections").removeClass("leftZero");
+        $(".mobileMenuBtn").toggleClass("mobileMenuBtnTransform");
+    }
 });
 
 //BoxShadow dla navbara po scrollowaniu 
@@ -58,4 +65,3 @@ setInterval(() => {
 
     $(".timeLeft").text(hoursLeft + ":" + minutesLeft + ":" + secondsLeft);
 }, 1000);
-
