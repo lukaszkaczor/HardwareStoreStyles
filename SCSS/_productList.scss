@@ -1,8 +1,12 @@
-.searchInfo{
+.searchInfo {
     width: 90vw;
 }
 
-.searchResults{
+.product{
+    width: 90vw;
+}
+
+.searchResults {
     width: 100%;
 
     h1 {
@@ -35,41 +39,159 @@
     }
 }
 
-.filterHolder{
-    display: none;
+.filtersCaptionHolder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.filterHolder {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 25%;
+    padding: 5px 20px 20px 20px;
 
-.product {
+    position: fixed;
+    // background: red;
+    background: $primaryColor;
+    width: 100vw;
+    height: 100vh;
+    left: -100vw;
+    top: 75px;
+    // top: 250px;
+    // align-self: center;
 
-    align-items: flex-start;
-    justify-content: flex-end;
-    // border: 2px solid #444444;
-    // border-radius: 20px;
-    border-bottom: 2px solid #444444;
+    transition: .2s all;
 
-    h4 {
-        font-size: 20px;
-        padding-top: 10px;
-        
-    }
-
-    h5 {
-        font-size: 12px;
-    }
-
-    img {
-        max-height: 250px;
+    button {
+        border: none;
+        padding: 10px 20px;
         align-self: center;
+        border-radius: 20px;
+        margin: 20px 0;
+        outline: none;
+        cursor: pointer;
+        background: whitesmoke;
+    }
+
+    h1 {
+        display: inline;
+        font-size: 30px;
+    }
+
+    .clearFiltersBtn {
+        cursor: pointer;
+        display: inline;
+        font-size: 12px;
+        background: rgba(0, 0, 0, 0);
+        padding: 8px;
+    }
+}
+
+.filterGroup {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+
+    button {
+        margin: 10px;
+        padding: 0;
+        border-radius: 0;
+        width: 100%;
+    }
+}
+
+.filterGroupName {
+    font-size: 20px;
+    padding: 10px 0;
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+
+    label {
+        font-size: 17px;
+    }
+
+    input[type=checkbox] {
+        margin-right: 5px;
+    }
+
+    input[type=number] {
+        width: 40%;
+        height: 40px;
+        border-radius: 20px;
+        border: none;
+        text-align: center;
+        -webkit-appearance: none;
+        outline: none;
+        margin-left: 0;
+        margin: 0 auto;
+        background: whitesmoke;
 
     }
 }
+
+.filterPrice {
+    margin-left: 0;
+}
+
+
+.productList {
+    .product {
+
+        align-items: flex-start;
+        justify-content: flex-end;
+        // border: 2px solid #444444;
+        // border-radius: 20px;
+        border-bottom: 2px solid #444444;
+
+        h4 {
+            font-size: 20px;
+            padding-top: 10px;
+
+        }
+
+        h5 {
+            font-size: 12px;
+        }
+
+        img {
+            max-height: 250px;
+            align-self: center;
+
+        }
+    }
+}
+
+.mobileFilterStrip {
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+    // height: 100px;
+    // background: #000;
+    margin: 20px 0;
+
+    button{
+        outline: none;
+        border: none;
+        padding: 20px 30px;
+    }
+
+    select{
+        outline: none;
+        border: none;
+    }
+}
+
 
 @media (min-width: 768px) {
 
-    .searchInfo{
+    .searchInfo {
         width: $tabletContent;
-        }
+    }
 
     .productListContent {
         display: grid;
@@ -84,317 +206,217 @@
         min-height: calc(100vh - 125px);
     }
 
-    
-.filtersCaptionHolder {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
-.filterHolder {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 25%;
-    padding: 5px 20px 20px 20px;
-    border: 3px solid $secondaryColor;
-    border-radius: 20px;
-
-    button {
-        border: none;
-        padding: 10px 20px;
-        align-self: center;
-        border-radius: 20px;
-        margin: 20px 0;
-        outline: none;
-        cursor: pointer;
-        background: whitesmoke;
+    .filtersCaptionHolder {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    h1 {
-        display: inline;
-        font-size: 30px;
+
+
+    .filterPrice {
+        margin-left: 0;
+    }
+    .productList {
+        // flex-basis: 75%;
+        display: grid;
+        align-content: center;
+
+        grid-gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
+
+        .product {
+
+            align-items: flex-start;
+            justify-content: flex-end;
+            border: 2px solid #444444;
+            border-radius: 20px;
+
+            h4 {
+                font-size: 20px;
+                padding-top: 10px;
+
+            }
+
+            h5 {
+                font-size: 12px;
+            }
+
+            img {
+                max-height: 250px;
+            }
+        }
     }
 
-    .clearFiltersBtn {
-        cursor: pointer;
-        display: inline;
-        font-size: 12px;
-        background: rgba(0, 0, 0, 0);
-        padding: 8px;
-    }
-}
-
-.filterGroup {
-    display: flex;
-    flex-direction: column;
-    margin: 10px 0;
-
-    button {
-        margin: 10px;
-        padding: 0;
-        border-radius: 0;
+    .product{
         width: 100%;
     }
-}
 
-.filterGroupName {
-    font-size: 20px;
-    padding: 10px 0;
-}
-
-.filter {
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
-
-    label {
-        font-size: 17px;
+    .mobileFilterStrip{
+        width: $tabletContent;
     }
-
-    input[type=checkbox] {
-        margin-right: 5px;
-    }
-
-    input[type=number] {
-        width: 40%;
-        height: 40px;
-        border-radius: 20px;
-        border: none;
-        text-align: center;
-        -webkit-appearance: none;
-        outline: none;
-        margin-left: 0;
-        margin: 0 auto;
-        background: whitesmoke;
-
-    }
-}
-
-.filterPrice {
-    margin-left: 0;
-}
-
-.filterHolder{
-    display: none;
-}
-
-.productList {
-    // flex-basis: 75%;
-    display: grid;
-    align-content: center;
-
-    grid-gap: 10px;
-    grid-template-columns: repeat(3, 1fr);
-
-    .product {
-
-        align-items: flex-start;
-        justify-content: flex-end;
-        border: 2px solid #444444;
-        border-radius: 20px;
-
-        h4 {
-            font-size: 20px;
-            padding-top: 10px;
-            
-        }
-
-        h5 {
-            font-size: 12px;
-        }
-
-        img {
-            max-height: 250px;
-        }
-    }
-}
 }
 
 
 @media (min-width: 1000px) {
 
 
-    .searchInfo{
+
+    .searchInfo {
         width: 950px;
     }
 
 
-    .filterHolder{
-        display: flex;
+       .filterHolder{
+        height: auto;
+        width: 100%;
+        position: static;
     }
 
-    .productListContent{
+    .productListContent {
         width: 950px;
         grid-template-columns: 1fr 3fr;
     }
 
+    .mobileFilterStrip {
+        display: none;
+    }
+
+    .filterHolder {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 25%;
+        padding: 5px 20px 20px 20px;
+        border: 3px solid $secondaryColor;
+        border-radius: 20px;
+
+        button {
+            border: none;
+            padding: 10px 20px;
+            align-self: center;
+            border-radius: 20px;
+            margin: 20px 0;
+            outline: none;
+            cursor: pointer;
+            background: whitesmoke;
+        }
+
+        h1 {
+            display: inline;
+            font-size: 30px;
+        }
+
+        .clearFiltersBtn {
+            cursor: pointer;
+            display: inline;
+            font-size: 12px;
+            background: rgba(0, 0, 0, 0);
+            padding: 8px;
+        }
+    }
+
+    .filterGroup {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 0;
+
+        button {
+            margin: 10px;
+            padding: 0;
+            border-radius: 0;
+            width: 100%;
+        }
+    }
+
+    #closeFiltersBtn{
+        display: none;
+    }
 }
+
 @media (min-width: 1200px) {
 
-.searchInfo {
-    width: $desktopContent;
-}
-
-.searchResults {
-    width: 100%;
-
-    h1 {
-        font-size: 20px;
-        display: inline;
+    .searchInfo {
+        width: $desktopContent;
     }
 
-    .searchedPhrase {
-        font-weight: 600;
-    }
 
-    .quantity {
-        color: rgba(0, 0, 0, .5);
-    }
-}
-
-.path {
-    width: 100%;
-    margin: 20px 0;
-
-    a {
-        text-decoration: none;
-        font-size: 14px;
-        color: $secondaryColor;
-    }
-
-    .break {
-        display: inline;
-        font-size: 14px;
-    }
-}
-
-.productListContent {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    grid-gap: 10px;
-    width: $desktopContent;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    margin-top: 20px;
-    min-height: calc(100vh - 125px);
-}
-
-.filtersCaptionHolder {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.filterHolder {
-    display: flex;
-    flex-direction: column;
-    flex-basis: 25%;
-    padding: 5px 20px 20px 20px;
-    border: 3px solid $secondaryColor;
-    border-radius: 20px;
-
-    button {
-        border: none;
-        padding: 10px 20px;
-        align-self: center;
-        border-radius: 20px;
-        margin: 20px 0;
-        outline: none;
-        cursor: pointer;
-        background: whitesmoke;
-    }
-
-    h1 {
-        display: inline;
-        font-size: 30px;
-    }
-
-    .clearFiltersBtn {
-        cursor: pointer;
-        display: inline;
-        font-size: 12px;
-        background: rgba(0, 0, 0, 0);
-        padding: 8px;
-    }
-}
-
-.filterGroup {
-    display: flex;
-    flex-direction: column;
-    margin: 10px 0;
-
-    button {
-        margin: 10px;
-        padding: 0;
-        border-radius: 0;
-        width: 100%;
-    }
-}
-
-.filterGroupName {
-    font-size: 20px;
-    padding: 10px 0;
-}
-
-.filter {
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
-
-    label {
-        font-size: 17px;
-    }
-
-    input[type=checkbox] {
-        margin-right: 5px;
-    }
-
-    input[type=number] {
-        width: 40%;
-        height: 40px;
-        border-radius: 20px;
-        border: none;
-        text-align: center;
-        -webkit-appearance: none;
-        outline: none;
-        margin-left: 0;
-        margin: 0 auto;
-        background: whitesmoke;
-
-    }
-}
-
-.filterPrice {
-    margin-left: 0;
-}
-
-.productList {
-    flex-basis: 75%;
-    display: grid;
-    align-content: center;
-    grid-gap: 10px;
-    grid-template-columns: repeat(3, 1fr);
-
-    .product {
-
+    .productListContent {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-gap: 10px;
+        width: $desktopContent;
+        flex-wrap: wrap;
         align-items: flex-start;
-        justify-content: flex-end;
-        border: 2px solid #444444;
-        border-radius: 20px;
+        margin-top: 20px;
+        min-height: calc(100vh - 125px);
+    }
 
-        h4 {
-            font-size: 20px;
-            padding-top: 10px;
-            
+
+    .filterGroupName {
+        font-size: 20px;
+        padding: 10px 0;
+    }
+
+    .filter {
+        display: flex;
+        align-items: center;
+        margin-left: 20px;
+
+        label {
+            font-size: 17px;
         }
 
-        h5 {
-            font-size: 12px;
+        input[type=checkbox] {
+            margin-right: 5px;
         }
 
-        img {
-            max-height: 250px;
+        input[type=number] {
+            width: 40%;
+            height: 40px;
+            border-radius: 20px;
+            border: none;
+            text-align: center;
+            -webkit-appearance: none;
+            outline: none;
+            margin-left: 0;
+            margin: 0 auto;
+            background: whitesmoke;
+
         }
     }
-}
+
+    .filterPrice {
+        margin-left: 0;
+    }
+
+    .productList {
+        flex-basis: 75%;
+        display: grid;
+        align-content: center;
+        grid-gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
+
+        .product {
+
+            align-items: flex-start;
+            justify-content: flex-end;
+            border: 2px solid #444444;
+            border-radius: 20px;
+
+            h4 {
+                font-size: 20px;
+                padding-top: 10px;
+
+            }
+
+            h5 {
+                font-size: 12px;
+            }
+
+            img {
+                max-height: 250px;
+            }
+        }
+    }
 }
