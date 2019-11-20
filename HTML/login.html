@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap&subset=latin-ext" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+        <div class="inputForm">
+                <h2>Zaloguj.</h2>
+
+            <section id="loginForm">
+                <form action="/Account/Login" class="form-horizontal" method="post" role="form">
+                    <div class="inputGroup">
+                        <label for="Email">Adres e-mail</label>
+                            <input class="textInput" data-val="true" id="Email" name="Email" type="text"
+                                value="" />
+                            <span class="warningText" data-valmsg-for="Email"
+                                data-valmsg-replace="true"></span>
+                    </div>
+                    <div class="inputGroup">
+                        <label for="Password">Hasło</label>
+                            <input class="textInput" data-val="true" data-val-required="Pole Hasło jest wymagane."
+                                id="Password" name="Password" type="password" />
+                            <span class="warningText" data-valmsg-for="Password"
+                                data-valmsg-replace="true"></span>
+                    </div>
+                    <div class="inputGroup">
+                            <div class="checkbox">
+                                <input data-val="true" data-val-required="Pole Zapamiętać Cię? jest wymagane."
+                                    id="RememberMe" name="RememberMe" type="checkbox" value="true" /><input
+                                    name="RememberMe" type="hidden" value="false" />
+                                <label for="RememberMe">Zapamiętać Cię?</label>
+                            </div>
+                    </div>
+                    <div class="inputGroup">
+                            <input type="submit" value="Zaloguj" class="btn" />
+                    </div>
+                 
+                        <a class="registerLink" href="/Account/Register">Rejestracja</a>
+               
+                </form>
+            </section>
+        </div>
+        <!-- <div class="col-md-4">
+            <section id="socialLoginForm">
+
+                <h4>Zaloguj się za pomocą innej usługi.</h4>
+                <hr />
+                <div>
+                    <p>
+                        Nie skonfigurowano żadnych zewnętrznych usług uwierzytelniania. Zapoznaj się z <a
+                            href="https://go.microsoft.com/fwlink/?LinkId=403804">tym artykułem</a>,
+                        aby uzyskać szczegółowe informacje dotyczące konfigurowania tej aplikacji platformy ASP.NET pod
+                        kątem obsługi logowania za pośrednictwem usług zewnętrznych.
+                    </p>
+                </div>
+
+
+            </section>
+        </div> -->
+    <!-- </div> -->
+
+</body>
+
+</html>

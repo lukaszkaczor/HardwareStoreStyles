@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap&subset=latin-ext" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <a href="" class="linkToIndex">Strona główna</a>
+    <!-- <h2>Zarejestruj.</h2> -->
+
+    <form action="/Account/Register" class="inputForm" method="post" role="form">
+        <h2>Utwórz nowe konto.</h2>
+        <!-- <hr /> -->
+        <div class="validation-summary-valid text-danger" data-valmsg-summary="true">
+            <ul>
+                <li style="display:none"></li>
+            </ul>
+        </div>
+        <div class="inputGroup">
+            <label for="Email">Adres e-mail</label>
+            <!-- <div class="col-md-10"> -->
+                <input class="textInput" data-val="true" id="Email" name="Email" type="text" value="" />
+            <!-- </div> -->
+        </div>
+        <div class="inputGroup">
+            <label class="col-md-2 control-label" for="Password">Hasło</label>
+            <!-- <div class="col-md-10"> -->
+                <input class="textInput" data-val="true"
+                    data-val-length="Hasło musi zawierać co najmniej następującą liczbę znaków: 6."
+                    data-val-length-max="100" data-val-length-min="6" data-val-required="Pole Hasło jest wymagane."
+                    id="Password" name="Password" type="password" />
+            </div>
+        </div>
+        <div class="inputGroup">
+            <label class="col-md-2 control-label" for="ConfirmPassword">Potwierdź hasło</label>
+            <div class="col-md-10">
+                <input class="textInput" data-val="true" data-val-equalto="Hasło i jego potwierdzenie są niezgodne."
+                    data-val-equalto-other="*.Password" id="ConfirmPassword" name="ConfirmPassword" type="password" />
+            </div>
+        </div>
+        <div class="inputGroup">
+            <!-- <div class="col-md-offset-2 col-md-10"> -->
+                <input type="submit" class="btn" value="Zarejestruj" />
+            <!-- </div> -->
+        </div>
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+.inputForm{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid $secondaryColor;
+    border-radius: 20px;
+    transform: translateY(25%);
+    width: 300px;
+
+    h2{
+        font-size: 25px;
+        padding: 20px;
+    }
+}
+
+.inputGroup{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+
+    .textInput{
+        border: 2px solid $secondaryColor;
+        padding: 10px 15px;
+        outline: none;
+        border-radius: 20px;
+        width: 100%;
+    }
+
+    label{
+        font-size: 16px;
+        color: black;
+        padding: 5px;
+    }
+    
+
+    .btn{
+        padding: 10px 20px;
+        width: 50%;
+        border-radius: 20px;
+        border: none;
+        align-self: center;
+    }
+
+
+}
+.registerLink{
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px;
+    margin: 0 auto 20px;
+    width: 100px;
+    color: $secondaryColor;
+    text-align: center;
+}
+
+.warningText{
+    color: crimson;
+    font-size: 14px;
+    padding: 5px
+}
+
+.linkToIndex{
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    text-decoration: none;
+    color: $secondaryColor;
+}
