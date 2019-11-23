@@ -944,6 +944,88 @@ nav {
   color: #444444;
 }
 
+.tableContainer {
+  margin-top: 100px;
+  width: 90vw;
+}
+
+.tableContainer a {
+  text-decoration: none;
+  color: #444444;
+  font-size: 16px;
+}
+
+.tableContainer p a {
+  display: block;
+  padding: 20px 0;
+}
+
+.tableContainer p a i {
+  font-size: 30px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table td,
+.table th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+  font-size: 18px;
+}
+
+.table th {
+  font-weight: bold;
+}
+
+.table tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.table .tableActions {
+  width: 150px;
+}
+
+.table .tableLinkHolder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.table .tableLinkHolder a {
+  width: 30%;
+  text-align: center;
+}
+
+@media (min-width: 700px) {
+  .tableContainer {
+    margin-top: 100px;
+    width: 700px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .tableContainer {
+    margin-top: 100px;
+    width: 950px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .tableContainer {
+    margin-top: 100px;
+    width: 1150px;
+  }
+}
+
 body {
   display: -webkit-box;
   display: -ms-flexbox;

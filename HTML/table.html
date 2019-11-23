@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <!-- <link href="Assets/fontawesome-free-5.11.2-web/css/all.css" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap&subset=latin-ext" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="hamburgerMenu">
+                <div class="mobileMenuBtn"></div>
+            </div>
+
+            <div class="logoHolder">
+                <img src="https://www.seoclerk.com/pics/551103-1TOqFD1502285018.jpg" alt="">
+                <a href="" class="logo">KompEX</a>
+            </div>
+
+            <form class="searchForm">
+                <input type="text" name="Text" id="" class="searchTxt">
+                <select name="Filter" class="searchSelect">
+                    <option value="0">Wszystko</option>
+                    <option value="1">Podzespoły komputerowe</option>
+                    <option value="2">Tablety i laptopy</option>
+                    <option value="3">Telefony i GPS</option>
+                    <option value="4">Urządzenia peryferyjne</option>
+                    <option value="5">RTV</option>
+                    <option value="6">Oprogramowanie</option>
+                </select>
+                <button type="submit" class="searchBtn"><i class="fas fa-search"></i></button>
+            </form>
+
+            <div class="menuHolder">
+                <div class="menuItem"><i class="fas fa-search"></i></div>
+                <div class="menuItem"><i class="fas fa-users"></i></div>
+                <div class="menuItem"><i class="fas fa-shopping-cart"></i></div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="tableContainer">
+        <h2>Index</h2>
+
+        <p>
+            <a href="/Tags/Create"><i class="far fa-plus-square"></i></a>
+        </p>
+        <table class="table">
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Name
+                </th>
+                <th></th>
+            </tr>
+
+            <tr>
+                <td>
+                    Taktowanie procesora
+                </td>
+                <td>
+                    Taktowanie procesora
+                </td>
+
+                <td class="tableActions">
+                    <div class="tableLinkHolder">
+                        <a href="/Tags/Edit/2"><i class="far fa-edit"></i></a> |
+                        <a href="/Tags/Details/2"><i class="fas fa-info"></i></a> |
+                        <a href="/Tags/Delete/2"><i class="far fa-minus-square"></i></a>
+                    </div>
+                </td>
+            </tr>
+            <!-- <tr>
+                <td>
+                    Taktowanie procesora
+                </td>
+                <td>
+                    <div class="tableLinkHolder">
+                        <a href="/Tags/Edit/2">Edit</a> |
+                        <a href="/Tags/Details/2">Details</a> |
+                        <a href="/Tags/Delete/2">Delete</a>
+                    </div>
+                </td>
+            </tr> -->
+           
+
+        </table>
+    </div>
+</body>
+
+</html>
