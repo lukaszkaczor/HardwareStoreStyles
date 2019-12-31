@@ -1,8 +1,7 @@
 @import "config";
 @import "navbar";
-@import "productList";
-@import "product";
 @import "slider";
+@import "productList";
 @import "login";
 @import "table";
 
@@ -13,7 +12,7 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 20px;
-    width: 100vw;
+    // width: 100vw;
 }
 
 .content {
@@ -519,15 +518,16 @@ body {
     }
 }
 
-footer {
-    height: 300px;
-    width: 100vw;
-    background: #262626;
-    color: $primaryColor;
-    text-align: center;
-    line-height: 100px;
-    margin-top: 100px;
-}
+@include footer;
+// footer {
+//     height: 300px;
+//     width: 100%;
+//     background: #262626;
+//     color: $primaryColor;
+//     text-align: center;
+//     line-height: 100px;
+//     margin-top: 100px;
+// }
 
 
 

@@ -5,18 +5,55 @@ $tabletContent: 700px;
 
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
- 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    overflow-x: hidden;
+
+body {
+  overflow-x: hidden;
 }
 
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+*:active,
+*:focus {
+  outline: 0;
+  -moz-outline-style: none;
+}
+
+@mixin pathToResults {
+  .path {
+    width: 100%;
+    // margin: 90px 0 10px;
+
+    a {
+      text-decoration: none;
+      font-size: 14px;
+      color: $secondaryColor;
+    }
+
+    .break {
+      display: inline;
+      font-size: 14px;
+    }
+  }
+}
+
+@mixin footer {
+  footer {
+    height: 300px;
+    width: 100vw;
+    background: #262626;
+    color: $primaryColor;
+    text-align: center;
+    line-height: 100px;
+    margin-top: 100px;
+}
+
 }

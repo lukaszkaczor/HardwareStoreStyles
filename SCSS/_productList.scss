@@ -23,21 +23,23 @@
     }
 }
 
-.path {
-    width: 100%;
-    margin: 90px 0 10px;
 
-    a {
-        text-decoration: none;
-        font-size: 14px;
-        color: $secondaryColor;
-    }
+@include pathToResults;
+// .path {
+//     width: 100%;
+//     margin: 90px 0 10px;
 
-    .break {
-        display: inline;
-        font-size: 14px;
-    }
-}
+//     a {
+//         text-decoration: none;
+//         font-size: 14px;
+//         color: $secondaryColor;
+//     }
+
+//     .break {
+//         display: inline;
+//         font-size: 14px;
+//     }
+// }
 
 .filtersCaptionHolder {
     display: flex;
