@@ -435,6 +435,11 @@ nav {
   height: 100%;
 }
 
+img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .captionsHolder {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -23,6 +23,10 @@
     height: 100%;
 }
 
+img{
+    object-fit: cover;
+}
+
 .captionsHolder {
     display: flex;
     flex-direction: column;
