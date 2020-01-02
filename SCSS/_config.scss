@@ -27,6 +27,11 @@ input[type=number]::-webkit-outer-spin-button {
   -moz-outline-style: none;
 }
 
+.resize-animation-stopper * {
+  animation: none !important;
+  transition: none !important;
+}
+
 @mixin pathToResults {
   .path {
     width: 100%;

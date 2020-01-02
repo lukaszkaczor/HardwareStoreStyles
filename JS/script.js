@@ -5,7 +5,7 @@ $(".hamburgerMenu").on("click", function () {
 
 });
 
-$(".fa-search").on("click", function () {
+$(".menuItem .fa-search").on("click", function () {
     $(".searchForm").toggleClass("showSearchForm");
 });
 
@@ -65,3 +65,14 @@ setInterval(() => {
 
     $(".timeLeft").text(hoursLeft + ":" + minutesLeft + ":" + secondsLeft);
 }, 1000);
+
+
+//Disable transitions on resize
+let resizeTimer;
+window.addEventListener("resize", () => {
+  document.body.classList.add("resize-animation-stopper");
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    document.body.classList.remove("resize-animation-stopper");
+  }, 400);
+});

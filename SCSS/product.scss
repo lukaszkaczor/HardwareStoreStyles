@@ -356,6 +356,10 @@
 
     }
 
+    .productName{
+        width: 100%;
+        border-bottom: 1px solid rgba($secondaryColor, 0.3);
+    }
 
     .slider {
         grid-area: slider;

@@ -101,15 +101,12 @@ nav {
 
 .menuItem {
     display: flex;
-    margin: .7em;
+    margin-left: 1em;
     color: $secondaryColor;
+    text-decoration: none;
     cursor: pointer;
-
-    &:last-child {
-        margin-right: 0;
-    }
-
 }
+
 
 .mobileMenuBtnTransform {
     transform: rotate(45deg);
