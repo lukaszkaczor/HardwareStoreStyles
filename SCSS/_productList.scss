@@ -1,6 +1,7 @@
-.searchInfo {
-    width: 90vw;
-}
+// .searchInfo {
+//     width: 90vw;
+//         margin-top: 80px;
+// }
 
 .product {
     width: 90vw;
@@ -25,21 +26,7 @@
 
 
 @include pathToResults;
-// .path {
-//     width: 100%;
-//     margin: 90px 0 10px;
 
-//     a {
-//         text-decoration: none;
-//         font-size: 14px;
-//         color: $secondaryColor;
-//     }
-
-//     .break {
-//         display: inline;
-//         font-size: 14px;
-//     }
-// }
 
 .filtersCaptionHolder {
     display: flex;
@@ -248,15 +235,15 @@
     .searchInfo {
         width: $desktopContent;
     }
+    .path{
+        margin-top: 20px;
+    }
 
     .productListContent {
         grid-template-columns: 1fr 3fr;
         width: $desktopContent;
     }
 
-    .path{
-        margin-top: 20px;
-    }
 
     .filterGroupName {
         font-size: 20px;

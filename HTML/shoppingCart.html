@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap&subset=latin-ext" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="hamburgerMenu">
+                <div class="mobileMenuBtn"></div>
+            </div>
+
+            <div class="logoHolder">
+                <img src="https://www.seoclerk.com/pics/551103-1TOqFD1502285018.jpg" alt="">
+                <a href="" class="logo">KompEX</a>
+            </div>
+
+            <form class="searchForm">
+                <input type="text" name="Text" id="" class="searchTxt">
+                <select name="Filter" class="searchSelect">
+                    <option value="0">Wszystko</option>
+                    <option value="1">Podzespoły komputerowe</option>
+                    <option value="2">Tablety i laptopy</option>
+                    <option value="3">Telefony i GPS</option>
+                    <option value="4">Urządzenia peryferyjne</option>
+                    <option value="5">RTV</option>
+                    <option value="6">Oprogramowanie</option>
+                </select>
+                <button type="submit" class="searchBtn"><i class="fas fa-search"></i></button>
+            </form>
+
+            <div class="menuHolder">
+                <a href="#" class="menuItem"><i class="fas fa-search"></i></a>
+                <form>
+                    <a href="#" class="menuItem"><i class="fas fa-users"></i></a>
+                </form>
+                <a href="#" class="menuItem"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobileSections">
+        <a href="#" class="mobileMenuLink"><i class="fas fa-hdd"></i>Podzespoły komputerowe</a>
+        <a href="#" class="mobileMenuLink"><i class="fas fa-laptop"></i>Tablety i laptopy</a>
+        <a href="#" class="mobileMenuLink"><i class="fas fa-mobile"></i>Telefony i GPS</a>
+        <a href="#" class="mobileMenuLink"><i class="fas fa-keyboard"></i>Urządzenia peryferyjne</a>
+        <a href="#" class="mobileMenuLink"><i class="fas fa-tv"></i>RTV</a>
+        <a href="#" class="mobileMenuLink"><i class="fab fa-windows"></i>Oprogramowanie</a>
+    </div>
+
+    <div class="searchInfo">
+        <div class="path">
+            <div class="break"><i class="fas fa-chevron-left"></i></div>
+            <a href="">Strona Główna</a>
+        </div>
+    </div>
+
+
+    <div class="shoppingCartContent">
+
+        <!-- <div class="emptyBasketInfo">
+            <h3>Twój koszyk jest pusty</h3>
+            <h5>Przejdź do <a href="#">strony głównej</a> i wybierz coś dla siebie</h6>
+        </div> -->
+
+
+
+        <table>
+            <tr>
+                <th class="productHeader">Produkt</th>
+                <th class="priceHeader">Cena</th>
+                <th class="quantityHeader">Ilość</th>
+                <th class="totalHeader">Razem</th>
+            </tr>
+
+            <tr class="rowWithProduct"> 
+                <td class="productNameWithImg">
+                    <div class="productDsc">
+                        <img src="https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2019/12/pr_2019_12_17_9_46_51_434_06.jpg"
+                            alt="" srcset="">
+                        <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam, tempore.</a>
+                    </div>
+                </td>
+                <td class="priceContent"><span class="hideWhenResolutionIsHigherThan768">Cena za sztukę: </span><span class="price">799</span>zł</td>
+                <td class="formCell">
+                    <form class="adjustForm" action="">
+                        <button class="hideOnMobile" type="submit"><i class="fas fa-minus"></i></button>
+                        <input class="inputQuantity" type="text" value="1">
+                        <button class="hideOnMobile" type="submit"><i class="fas fa-plus"></i></button>
+                        <button  class="hideWhenResolutionIsHigherThan768" type="submit"><i class="fas fa-check"></i></button>
+                    </form>
+                    <form  action="">
+                        <button type="submit"><i class="fas fa-times"></i></button>
+                    </form>
+                </td>
+                <td><span class="hideWhenResolutionIsHigherThan768">Razem: </span><span class="priceTimesQuantity">799</span>zł</td>
+            </tr>
+
+            <tr class="rowWithProduct"> 
+                <td class="productNameWithImg">
+                    <div class="productDsc">
+                        <img src="https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2019/12/pr_2019_12_17_9_46_51_434_06.jpg"
+                            alt="" srcset="">
+                        <a href="#">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam, tempore.</a>
+                    </div>
+                </td>
+                <td class="priceContent"><span class="hideWhenResolutionIsHigherThan768">Cena za sztukę: </span><span class="price">799.51</span>zł</td>
+                <td class="formCell">
+                    <form class="adjustForm" action="">
+                        <button class="hideOnMobile" type="submit"><i class="fas fa-minus"></i></button>
+                        <input class="inputQuantity" type="text" value="2">
+                        <button class="hideOnMobile" type="submit"><i class="fas fa-plus"></i></button>
+                        <button  class="hideWhenResolutionIsHigherThan768" type="submit"><i class="fas fa-check"></i></button>
+                    </form>
+                    <form  action="">
+                        <button type="submit"><i class="fas fa-times"></i></button>
+                    </form>
+                </td>
+                <td><span class="hideWhenResolutionIsHigherThan768">Razem: </span><span class="priceTimesQuantity">799</span>zł</td>
+            </tr>
+
+            <tr>
+                <td>Wartość zakupów: <span class="total">799</span>zł</td>
+            </tr>
+        </table>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="../JS/script.js"></script>
+<script src="../JS/brands.js"></script>
+<script src="../JS/shoppingCart.js"></script>
+</html>
