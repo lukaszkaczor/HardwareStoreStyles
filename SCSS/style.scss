@@ -5,6 +5,8 @@
 @import "login";
 @import "table";
 @import "shoppingCart";
+@import "orderDetails";
+
 
 body {
     display: flex;
@@ -22,7 +24,6 @@ body {
     overflow: hidden;;
     width: 90vw;
     margin-top: 100px;
-    font-family: "Lato";
 }
 
 .hotShotCaption {
@@ -467,8 +468,9 @@ body {
     }
 
     .content {
+        margin: 0 auto;
         width: $desktopContent;
-        margin-top: .5em;
+        // margin-top: .5em;
         grid-column-gap: 1em;
 
         grid-template-columns: repeat(6, 1fr);

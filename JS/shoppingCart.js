@@ -12,3 +12,13 @@ for(var i =0; i< prices.length; i++)
 }
 
 $(".total").text(total);
+
+
+var inputs = $(".inputQuantity");
+var products = $(".ProductId");
+
+var products
+$( inputs).change(function() {
+
+    alert("Quantity: " + this.value + "\nIndexOf: " +inputs.index(this) + "\nProductId: " +products[inputs.index(this)].value );
+});

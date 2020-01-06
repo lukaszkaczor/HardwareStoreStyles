@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="hamburgerMenu">
+                <div class="mobileMenuBtn"></div>
+            </div>
+
+            <div class="logoHolder">
+                <img src="https://www.seoclerk.com/pics/551103-1TOqFD1502285018.jpg" alt="">
+                <a href="" class="logo">KompEX</a>
+            </div>
+
+            <form class="searchForm">
+                <input type="text" name="Text" id="" class="searchTxt">
+                <select name="Filter" class="searchSelect">
+                    <option value="0">Wszystko</option>
+                    <option value="1">Podzespoły komputerowe</option>
+                    <option value="2">Tablety i laptopy</option>
+                    <option value="3">Telefony i GPS</option>
+                    <option value="4">Urządzenia peryferyjne</option>
+                    <option value="5">RTV</option>
+                    <option value="6">Oprogramowanie</option>
+                </select>
+                <button type="submit" class="searchBtn"><i class="fas fa-search"></i></button>
+            </form>
+
+            <div class="menuHolder">
+                <a href="#" class="menuItem"><i class="fas fa-search"></i></a>
+                <a href="#" class="menuItem"><i class="fas fa-shopping-cart"></i></a>
+                <form>
+                    <a href="#" class="menuItem"><i class="fas fa-users"></i></a>
+                </form>
+                <a href="#" class="menuItem"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <form class="orderDetailsContent">
+        <div class="boxList">
+            <h1 class="caption">1. Wybierz sposób dostawy</h1>
+            <div class="boxes">
+                <div class="box boxActive">
+                    <i class="fas fa-truck-moving"></i>
+                    <h5>Dostawa kurierem</h5>
+                    <h6>20,00 zł</h6>
+                </div>
+                <div class="box">
+                    <i class="fas fa-store"></i>
+                    <h5>Odbierz w salonie</h5>
+                    <h6>0,00 zł</h6>
+                </div>
+                <div class="box">
+                    <i class="fas fa-boxes"></i>
+                    <h5>Odbiór w paczkomacie</h5>
+                    <h6>9,90 zł</h6>
+                </div>
+            </div>
+        </div>
+
+        <div class="boxList">
+            <h1 class="caption">2. Wybierz sposób płatności</h1>
+            <div class="boxes">
+                <div class="box">
+                    <i class="fas fa-box-open"></i>
+                    <h5>Gotówka przy odbiorze</h5>
+                    <h6>+5,00 zł</h6>
+                </div>
+                <div class="box boxActive">
+                    <i class="fas fa-university"></i>
+                    <h5>Przelew bankowy</h5>
+                    <h6>0,00 zł</h6>
+                </div>
+                <div class="box">
+                    <i class="fab fa-paypal"></i>
+                    <h5>PayPal</h5>
+                    <h6>0,00 zł</h6>
+                </div>
+                <div class="box">
+                    <i class="fab fa-cc-visa"></i>
+                    <h5>Płatność kartą</h5>
+                    <h6>+5,00 zł</h6>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="addressInfo">
+            <h1 class="caption">3. Wpisz swoje dane do wysyłki</h1>
+
+            <div class="inputHolder">
+
+            <div class="inputLine">
+                <label for="">Imię</label>
+                <input type="text">
+            </div>
+
+            
+            <div class="inputLine">
+                <label for="">Nazwisko</label>
+                <input type="text">
+            </div>
+
+            
+            <div class="inputLine">
+                <label for="">Email</label>
+                <input type="text">
+            </div>
+
+            
+            <div class="inputLine">
+                <label for="">Adres</label>
+                <input type="text">
+            </div>
+
+            
+            <div class="inputLine">
+                <label for="">Kod pocztowy</label>
+                <input type="text">
+            </div>
+
+            <div class="inputLine">
+                <label for="">Miejscowość</label>
+                <input type="text">
+
+            </div>
+
+            
+            <div class="inputLine">
+                <label for="">Kraj</label>
+                <input type="text">
+            </div>
+
+            <div class="inputLine">
+                <label for="">Numer</label>
+                <input type="text">
+            </div>
+
+            <div class="inputLine">
+                <label for="">Uwagi do zamówienia</label>
+                <textarea name="Text1" class="message"></textarea>
+            </div>
+        </div>
+
+        <!-- <div class="addressInfo">
+            <div class="inputLine">
+                <label for="">Numer</label>
+                <input type="checkbox" name="" id="">
+            </div>
+            <input type="checkbox" name="" id="">
+            <input type="checkbox" name="" id="">
+            <input type="checkbox" name="" id="">
+        </div> -->
+
+    </div>
+    <button class="buyBtn" type="submit">Kup</button>
+</form>
+</body>
+
+</html>
