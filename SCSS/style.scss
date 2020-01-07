@@ -1,4 +1,3 @@
-@import "config";
 @import "navbar";
 @import "slider";
 @import "productList";
@@ -6,6 +5,7 @@
 @import "table";
 @import "shoppingCart";
 @import "orderDetails";
+@import "config";
 
 
 body {
@@ -575,3 +575,13 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-weight: 200;
 }
+
+
+// @media (min-width: 768px) {
+//     body, nav{
+//     width: 100vw;    
+//     }
+//     .navbar{
+//     border: 1px solid red;}
+    
+//     }
