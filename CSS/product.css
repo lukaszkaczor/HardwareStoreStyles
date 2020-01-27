@@ -29,7 +29,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 @media (min-width: 768px) {
-  body, nav {
+  body,
+  nav {
     width: 100vw;
   }
 }
@@ -319,6 +320,7 @@ nav {
   }
   .logoHolder img {
     width: 25%;
+    padding: 40px 20px 40px 0;
   }
   .menuItem .fa-search {
     font-size: 0;
@@ -617,7 +619,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 @media (min-width: 768px) {
-  body, nav {
+  body,
+  nav {
     width: 100vw;
   }
 }

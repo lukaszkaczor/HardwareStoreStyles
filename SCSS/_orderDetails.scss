@@ -86,7 +86,11 @@
     padding: 10px;
     width: 75%;
 
-
+    div{
+        display: flex;
+        flex-direction: column;
+    }
+    
     input {
         // padding: 10px;
         border: 1px solid rgba($secondaryColor, .3);
@@ -97,7 +101,8 @@
 
     label {
         display: flex;
-        align-items: center;
+        // align-items: center;
+        margin-top: 2px;
         // justify-content: flex-end;
         padding: 5px 0;
         font-size: 18px;
@@ -107,6 +112,11 @@
         // border: 1px solid red;
         padding: 10px;
         min-height: 200px;
+    }
+
+    span{
+        color: crimson;
+        font-size: 13px;
     }
 }
 
@@ -120,6 +130,7 @@
     margin: 20px 0;
 }
 
+
 @media (min-width: 768px) {
     .orderDetailsContent {
         width: 700px;
@@ -128,6 +139,10 @@
     .inputLine{
         display: grid;
         grid-template-columns: 1fr 1fr;
+        // grid-template-areas: ;
+
+
+
 
         label{
             justify-content: flex-end;

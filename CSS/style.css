@@ -29,7 +29,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 @media (min-width: 768px) {
-  body, nav {
+  body,
+  nav {
     width: 100vw;
   }
 }
@@ -319,6 +320,7 @@ nav {
   }
   .logoHolder img {
     width: 25%;
+    padding: 40px 20px 40px 0;
   }
   .menuItem .fa-search {
     font-size: 0;
@@ -1397,6 +1399,16 @@ img {
   width: 75%;
 }
 
+.inputLine div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .inputLine input {
   border: 1px solid rgba(68, 68, 68, 0.3);
   border-radius: 20px;
@@ -1407,9 +1419,7 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  margin-top: 2px;
   padding: 5px 0;
   font-size: 18px;
 }
@@ -1417,6 +1427,11 @@ img {
 .inputLine .message {
   padding: 10px;
   min-height: 200px;
+}
+
+.inputLine span {
+  color: crimson;
+  font-size: 13px;
 }
 
 .buyBtn {
@@ -1476,7 +1491,8 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 @media (min-width: 768px) {
-  body, nav {
+  body,
+  nav {
     width: 100vw;
   }
 }
