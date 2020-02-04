@@ -14,8 +14,7 @@ $(window).resize(function () {
         $(".searchForm").removeClass("showSearchForm");
 
     // if (($window).width() > 1000 && $(".mobileSections").hasClass("leftZero"))
-    if($(".mobileSections").hasClass("leftZero") && $(window).width() >= 1200)
-    {
+    if ($(".mobileSections").hasClass("leftZero") && $(window).width() >= 1200) {
         $(".mobileSections").removeClass("leftZero");
         $(".mobileMenuBtn").toggleClass("mobileMenuBtnTransform");
     }
@@ -50,29 +49,23 @@ function setProgressBarWidth() {
 }
 
 setInterval(() => {
-    var date = new Date();
-    var hours = date.getHours();
-    var minutes = date.getMinutes();
-    var seconds = date.getSeconds();
+    var endDate = new Date($("#endDate").val()).getTime() / 1000;
+    var now = new Date().getTime() / 1000;
 
-    var hoursLeft = 24 - hours;
-    var minutesLeft = 59 - minutes;
-    var secondsLeft = 59 - seconds
+    var timeLeftInSeconds = endDate - now;
 
-    if (hoursLeft < 10) hoursLeft = "0" + hoursLeft
-    if (minutesLeft < 10) minutesLeft = "0" + minutesLeft
-    if (secondsLeft < 10) secondsLeft = "0" + secondsLeft
+    var time = new Date(timeLeftInSeconds * 1000).toISOString().substr(11, 8);
 
-    $(".timeLeft").text(hoursLeft + ":" + minutesLeft + ":" + secondsLeft);
+    $(".timeLeft").text(time);
 }, 1000);
 
 
 //Disable transitions on resize
 let resizeTimer;
 window.addEventListener("resize", () => {
-  document.body.classList.add("resize-animation-stopper");
-  clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(() => {
-    document.body.classList.remove("resize-animation-stopper");
-  }, 400);
+    document.body.classList.add("resize-animation-stopper");
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+        document.body.classList.remove("resize-animation-stopper");
+    }, 400);
 });

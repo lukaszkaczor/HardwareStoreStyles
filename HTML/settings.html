@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Strona Główna</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <!-- <link href="Assets/fontawesome-free-5.11.2-web/css/all.css" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap&subset=latin-ext" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="hamburgerMenu">
+                <div class="mobileMenuBtn"></div>
+            </div>
+
+            <div class="logoHolder">
+                <img src="/Assets/aaa.png" alt="">
+                <a href="" class="logo">Kompex</a>
+            </div>
+
+            <form class="searchForm">
+                <input type="text" name="Text" id="" class="searchTxt">
+                <select name="Filter" class="searchSelect">
+                    <option value="0">Wszystko</option>
+                    <option value="1">Podzespoły komputerowe</option>
+                    <option value="2">Tablety i laptopy</option>
+                    <option value="3">Telefony i GPS</option>
+                    <option value="4">Urządzenia peryferyjne</option>
+                    <option value="5">RTV</option>
+                    <option value="6">Oprogramowanie</option>
+                </select>
+                <button type="submit" class="searchBtn"><i class="fas fa-search"></i></button>
+            </form>
+
+            <div class="menuHolder">
+                <a href="#" class="menuItem"><i class="fas fa-search"></i></a>
+                <a href="#" class="menuItem"><i class="fas fa-shopping-cart"></i></a>
+                <form>
+                    <a href="#" class="menuItem"><i class="fas fa-users"></i></a>
+                </form>
+                <a href="#" class="menuItem"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobileSections">
+        <a href="#" class="mobileMenuLink"><i class="fas fa-hdd"></i>Podzespoły komputerowe</a>
+        <a href="#" class="mobileMenuLink"><i class="fas fa-laptop"></i>Tablety i laptopy</a>
+        <a href="#" class="mobileMenuLink"><i class="fas fa-mobile"></i>Telefony i GPS</a>
+        <a href="#" class="mobileMenuLink"><i class="fas fa-keyboard"></i>Urządzenia peryferyjne</a>
+        <a href="#" class="mobileMenuLink"><i class="fas fa-tv"></i>RTV</a>
+        <a href="#" class="mobileMenuLink"><i class="fab fa-windows"></i>Oprogramowanie</a>
+    </div>
+
+    <div class="settingsContent">
+        <div class="settingsMenu">
+            <a href="#">Moje zamówienia</a>
+            <a href="#">Zmień hasło</a>
+            <a href="#">Usuń konto</a>
+            <a href="#">Adres</a>
+        </div>
+
+        <div class="settingPositions">
+
+            <!-- 
+            GOTOWA TABELA Z ZAMOWIENIAMI
+            <div class="tableWithOrders">
+                <table class="table">
+                    <tr>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Name
+                        </th>
+                        <th>Status</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            Taktowanie procesora sad
+                        </td>
+                        <td>
+                            Taktowanie procesora
+                        </td>
+
+                        <td class="tableActions">
+                            Added
+                        </td>
+                    </tr>
+
+                </table>
+
+            </div> -->
+
+
+            <!-- GOTOWA ZMIANA ADRESU -->
+            <!-- <form class="addressInfo">
+                <div class="inputHolder">
+                    <div class="inputLine">
+                        <label for="">Imię i nazwisko</label>
+                        <div>
+                            <input type="text">
+                            <span>To pole jest niepoprwane</span>
+                        </div>
+                    </div>
+
+                    <div class="inputLine">
+                        <label for="">Adres</label>
+                        <div>
+                            <input type="text">
+                            <span>To pole jest niepoprwane</span>
+                        </div>
+                    </div>
+
+                    <div class="inputLine">
+                        <label for="">Kod pocztowy</label>
+                        <div>
+                            <input type="text">
+                            <span>To pole jest niepoprwane</span>
+                        </div>
+                    </div>
+
+                    <div class="inputLine">
+                        <label for="">Miejscowość</label>
+                        <div>
+                            <input type="text">
+                            <span>To pole jest niepoprwane</span>
+                        </div>
+                    </div>
+
+                    <div class="inputLine">
+                        <label for="">Numer telefonu</label>
+                        <div>
+                            <input type="text">
+                            <span>To pole jest niepoprwane</span>
+                        </div>
+                    </div>
+                </div>
+                    <button type="submit" class="saveBtn">Zapisz</button>
+            </form> -->
+
+
+
+            <!-- GOTOWA ZMIANA HASŁA -->
+            <!-- <form id="change-password-form" method="post" class="inputFo2rm">
+                <div asp-validation-summary="All" class="warningText"></div>
+                <div class="inputGroup">
+                    <label asp-for="Input.OldPassword">Stare hasło</label>
+                    <input asp-for="Input.OldPassword" class="textInput" />
+                    <span asp-validation-for="Input.OldPassword" class="warningText"></span>
+                </div>
+                <div class="inputGroup">
+                    <label asp-for="Input.NewPassword">Nowe hasło</label>
+                    <input asp-for="Input.NewPassword" class="textInput" />
+                    <span asp-validation-for="Input.NewPassword" class="warningText"></span>
+                </div>
+                <div class="inputGroup">
+                    <label asp-for="Input.ConfirmPassword">Powtórz hasło</label>
+                    <input asp-for="Input.ConfirmPassword" class="textInput" />
+                    <span asp-validation-for="Input.ConfirmPassword" class="warningText"></span>
+                </div>
+
+                <div class="inputGroup">
+                    <button type="submit" class="btn savePassword">Zapisz hasło</button>
+                </div>
+            </form> -->
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="../JS/script.js"></script>
+    <script src="../JS/slider.js"></script>
+    <script src="../JS/brands.js"></script>
+</body>
+
+</html>
