@@ -3,6 +3,8 @@
 }
 
 .searchResults {
+    display: flex;
+    justify-content: space-between;
     width: 100%;
 
     h1 {
@@ -17,6 +19,10 @@
     .quantity {
         color: rgba(0, 0, 0, .5);
     }
+
+    .selectHolder{
+        display: none;
+    }
 }
 
 
@@ -27,6 +33,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 10px;
 }
 
 .filterHolder {
@@ -34,13 +41,13 @@
     flex-direction: column;
     flex-basis: 25%;
     padding: 5px 20px 20px 20px;
-    position: fixed;
+    position: absolute;
     background: $primaryColor;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     left: -100vw;
     top: 75px;
-
+    // overflow-y: auto;
     transition: .2s all;
 
     button {
@@ -48,10 +55,17 @@
         padding: 10px 20px;
         align-self: center;
         border-radius: 20px;
-        margin: 20px 0;
+        margin: 10px 0 0 0;
         outline: none;
         cursor: pointer;
         background: whitesmoke;
+    }
+    .expandListBtn{
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-top: 10px;
+        padding: 5px;
     }
 
     h1 {
@@ -65,6 +79,8 @@
         font-size: 12px;
         background: rgba(0, 0, 0, 0);
         padding: 8px;
+        text-decoration: none;
+        color: $secondaryColor;
     }
 }
 
@@ -73,17 +89,22 @@
     flex-direction: column;
     margin: 10px 0;
 
-    button {
-        margin: 10px;
-        padding: 0;
-        border-radius: 0;
-        width: 100%;
-    }
+    // button {
+    //     margin: 10px;
+    //     padding: 10px 20px;
+    //     border-radius: 20px;
+    //     width: 50%;
+    // }
+}
+
+.filterForm{
+    display: flex;
+    justify-content: center;
 }
 
 .filterGroupName {
     font-size: 20px;
-    padding: 10px 0;
+    padding: 0 0 10px 0;
 }
 
 .filter {
@@ -179,6 +200,11 @@
         margin-left: 0;
     }
 
+
+    .filterHolder{
+        min-height: auto;
+    }
+
     .productList {
         display: grid;
         align-content: center;
@@ -225,6 +251,24 @@
     #closeFiltersBtn {
         display: none;
     }
+
+    .searchResults{
+        .selectHolder{
+            display: flex;
+            align-items: center;
+
+            select{
+                margin-left: 10px;
+                padding: 5px;
+                border: 2px solid $secondaryColor;
+                border-radius: 10px;
+            }
+            h1{
+                font-size: 18px;
+            }
+        }
+        
+    }
 }
 
 @media (min-width: 1200px) {
@@ -243,6 +287,19 @@
 
     .filterGroupName {
         font-size: 20px;
-        padding: 10px 0;
+        padding: 0 0 10px 0;
     }
+}
+
+.displayNone{
+    display: none;
+}
+
+// .brandFilter:nth-child(n+7){
+//     display: none;
+// }
+.ebe{
+    background: #000;
+    // width: 100vw;
+    height: 200px;
 }

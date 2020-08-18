@@ -62,8 +62,20 @@
             <a href="">"huawei"</a>
         </div>
         <div class="searchResults">
-            <h1 class="searchedPhrase">"huawei"</h1>
-            <h1 class="quantity">(287 wyników)</h1>
+            <div>
+                <h1 class="searchedPhrase">"huawei"</h1>
+                <h1 class="quantity">(287 wyników)</h1>
+            </div>
+            <div class="selectHolder">
+                <h1>Sortuj według</h1>
+                <select>
+                    <option value="1">Domyślne</option>
+                    <option value="1">Nazwa rosnąco</option>
+                    <option value="1">Nazwa malejąco</option>
+                    <option value="1">Cena rosnąco</option>
+                    <option value="1">Cena malejąco</option>
+                </select>
+            </div>
         </div>
     </div>
     <div class="mobileFilterStrip">
@@ -77,31 +89,71 @@
     </div>
     <div class="productListContent">
         <div class="filterHolder">
-                <!--temp  -->
-                    <button id="closeFiltersBtn">X</button>
-                <!--  -->
+            <!--temp  -->
+            <button id="closeFiltersBtn">X</button>
+            <!--  -->
             <div class="filtersCaptionHolder">
                 <h1>Filtry</h1>
-                <button class="clearFiltersBtn">Wczyść filtry</button>
+                <a href="" class="clearFiltersBtn">Wczyść filtry</a>
             </div>
-            <button>Pokaż wszystkie filtry</button>
+            <!-- <button>Pokaż wszystkie filtry</button> -->
 
             <div class="filterGroup">
                 <h2 class="filterGroupName">Producent</h2>
 
-                <div class="filter">
+                <div class="filter brandFilter">
                     <input type="checkbox" name="" id="i1">
                     <label for="i1">Apple <span>(20)</span></label>
                 </div>
-                <div class="filter">
+                <div class="filter brandFilter">
                     <input type="checkbox" name="" id="i2">
                     <label for="i2">Microsoft <span>(20)</span></label>
                 </div>
-                <div class="filter">
+                <div class="filter brandFilter">
+                    <input type="checkbox" name="" id="i1">
+                    <label for="i1">Apple <span>(20)</span></label>
+                </div>
+                <div class="filter brandFilter">
+                    <input type="checkbox" name="" id="i2">
+                    <label for="i2">Microsoft <span>(20)</span></label>
+                </div>
+                <div class="filter brandFilter">
+                    <input type="checkbox" name="" id="i1">
+                    <label for="i1">Apple <span>(20)</span></label>
+                </div>
+                <div class="filter brandFilter displayNone">
+                    <input type="checkbox" name="" id="i2">
+                    <label for="i2">Microsoft <span>(20)</span></label>
+                </div>
+                <div class="filter brandFilter displayNone">
                     <input type="checkbox" name="" id="i3">
                     <label for="i3">Logitech <span>(20)</span></label>
                 </div>
-                <button>Pokaż więcej</button>
+                <div class="filter brandFilter displayNone">
+                    <input type="checkbox" name="" id="i1">
+                    <label for="i1">Apple <span>(20)</span></label>
+                </div>
+                <div class="filter brandFilter displayNone">
+                    <input type="checkbox" name="" id="i2">
+                    <label for="i2">Microsoft <span>(20)</span></label>
+                </div>
+                <div class="filter brandFilter displayNone">
+                    <input type="checkbox" name="" id="i3">
+                    <label for="i3">Logitech <span>(20)</span></label>
+                </div>
+                <div class="filter brandFilter displayNone">
+                    <input type="checkbox" name="" id="i1">
+                    <label for="i1">Apple <span>(20)</span></label>
+                </div>
+                <div class="filter brandFilter displayNone">
+                    <input type="checkbox" name="" id="i2">
+                    <label for="i2">Microsoft <span>(20)</span></label>
+                </div>
+                <div class="filter brandFilter displayNone">
+                    <input type="checkbox" name="" id="i3">
+                    <label for="i3">Logitech <span>(20)</span></label>
+                </div>
+                <button id="showBrands" class="expandListBtn">Pokaż więcej</button>
             </div>
             <div class="filterGroup">
 
@@ -113,50 +165,119 @@
             </div>
 
             <div class="filterGroup">
-                <h2 class="filterGroupName">Producent</h2>
+                <h2 class="filterGroupName">Kategoria</h2>
 
-                <div class="filter">
+                <div class="filter categoryFilter">
                     <input type="checkbox" name="" id="i1">
                     <label for="i1">Apple <span>(20)</span></label>
                 </div>
-                <div class="filter">
-                    <input type="checkbox" name="" id="i2">
-                    <label for="i2">Microsoft <span>(20)</span></label>
+
+                <div class="filter categoryFilter">
+                    <input type="checkbox" name="" id="i1">
+                    <label for="i1">Apple <span>(20)</span></label>
                 </div>
-                <div class="filter">
-                    <input type="checkbox" name="" id="i3">
-                    <label for="i3">Logitech <span>(20)</span></label>
+
+                <div class="filter categoryFilter">
+                    <input type="checkbox" name="" id="i1">
+                    <label for="i1">Apple <span>(20)</span></label>
                 </div>
+
+                <div class="filter categoryFilter">
+                    <input type="checkbox" name="" id="i1">
+                    <label for="i1">Apple <span>(20)</span></label>
+                </div>
+
+                <div class="filter categoryFilter">
+                    <input type="checkbox" name="" id="i1">
+                    <label for="i1">Apple <span>(20)</span></label>
+                </div>
+
+                <div class="filter categoryFilter displayNone">
+                    <input type="checkbox" name="" id="i1">
+                    <label for="i1">Apple <span>(20)</span></label>
+                </div>
+
+                <div class="filter categoryFilter displayNone">
+                    <input type="checkbox" name="" id="i1">
+                    <label for="i1">Apple <span>(20)</span></label>
+                </div>
+
+                <div class="filter categoryFilter displayNone">
+                    <input type="checkbox" name="" id="i1">
+                    <label for="i1">Apple <span>(20)</span></label>
+                </div>
+
+                <div class="filter categoryFilter displayNone">
+                    <input type="checkbox" name="" id="i1">
+                    <label for="i1">Apple <span>(20)</span></label>
+                </div>
+
+                <div class="filter categoryFilter displayNone">
+                    <input type="checkbox" name="" id="i1">
+                    <label for="i1">Apple <span>(20)</span></label>
+                </div>
+
+                <div class="filter categoryFilter displayNone">
+                    <input type="checkbox" name="" id="i1">
+                    <label for="i1">Apple <span>(20)</span></label>
+                </div>
+
+                <div class="filter categoryFilter displayNone">
+                    <input type="checkbox" name="" id="i1">
+                    <label for="i1">Apple <span>(20)</span></label>
+                </div>
+
+                <div class="filter categoryFilter displayNone">
+                    <input type="checkbox" name="" id="i1">
+                    <label for="i1">Apple <span>(20)</span></label>
+                </div>
+
+                <div class="filter categoryFilter displayNone">
+                    <input type="checkbox" name="" id="i1">
+                    <label for="i1">Apple <span>(20)</span></label>
+                </div>
+
+                <div class="filter categoryFilter displayNone">
+                    <input type="checkbox" name="" id="i1">
+                    <label for="i1">Apple <span>(20)</span></label>
+                </div>
+
+                <button id="showCategories" class="expandListBtn">Pokaż więcej</button>
+
+                <form class="filterForm">
+                    <button class="filterBtn">Filtruj</button>
+                </form>
+
             </div>
+
         </div>
         <div class="productList">
-             <a href="#" class="product">
-                    <img src="https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2019/3/pr_2019_3_25_11_4_25_547_00.jpg"
-                        alt="">
-                    <h3>Macbook pro 13"</h3>
-                    <h5>Procesor: intel</h5>
-                    <h5>Dysk: tysiąc</h5>
-                    <h5>Karta graficzna: DWA GIGA</h5>
-                    <h5>RAM: 8 GIBA</h5>
-    
-                    <h4>5000zł</h4>
-    
-                    <a class="addToCart" href="">Dodaj</a>
-                </a>
-             <a href="#" class="product">
-                    <img src="https://static.bhphoto.com/images/images1000x1000/1562489245_1485448.jpg"
-                        alt="">
-                    <h3>Macbook pro 13"</h3>
-                    <h5>Procesor: intel</h5>
-                    <h5>Dysk: tysiąc</h5>
-                    <h5>Karta graficzna: DWA GIGA</h5>
-                    <h5>RAM: 8 GIBA</h5>
-    
-                    <h4>5000zł</h4>
-    
-                    <a class="addToCart" href="">Dodaj</a>
-                </a>
-     <a href="#" class="product">
+            <a href="#" class="product">
+                <img src="https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2019/3/pr_2019_3_25_11_4_25_547_00.jpg"
+                    alt="">
+                <h3>Macbook pro 13"</h3>
+                <h5>Procesor: intel</h5>
+                <h5>Dysk: tysiąc</h5>
+                <h5>Karta graficzna: DWA GIGA</h5>
+                <h5>RAM: 8 GIBA</h5>
+
+                <h4>5000zł</h4>
+
+                <a class="addToCart" href="">Dodaj</a>
+            </a>
+            <a href="#" class="product">
+                <img src="https://static.bhphoto.com/images/images1000x1000/1562489245_1485448.jpg" alt="">
+                <h3>Macbook pro 13"</h3>
+                <h5>Procesor: intel</h5>
+                <h5>Dysk: tysiąc</h5>
+                <h5>Karta graficzna: DWA GIGA</h5>
+                <h5>RAM: 8 GIBA</h5>
+
+                <h4>5000zł</h4>
+
+                <a class="addToCart" href="">Dodaj</a>
+            </a>
+            <a href="#" class="product">
                 <img src="https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2019/7/pr_2019_7_2_11_22_37_21_08.jpg"
                     alt="">
                 <h3>Macbook pro 13"</h3>
@@ -185,7 +306,7 @@
 
             <a href="#" class="product">
                 <img src="https://images.morele.net/i1064/1348781_0_i1064.jpg" alt="">
-   
+
                 <h3>Macbook pro 13"</h3>
                 <h5>Procesor: intel</h5>
                 <h5>Dysk: tysiąc</h5>
@@ -205,7 +326,7 @@
 
                 <h4>5000zł</h4>
                 <a class="addToCart" href="">Dodaj</a>
-            </a> 
+            </a>
 
         </div>
     </div>
@@ -216,4 +337,5 @@
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <script src="../JS/script.js"></script>
 <script src="../JS/productList.js"></script>
+
 </html>
